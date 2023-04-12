@@ -1,6 +1,6 @@
 import { OrbitControls } from 'OrbitControls';
 import * as THREE from 'three';
-import { PLYLoader } from 'https://raw.githubusercontent.com/bztd/web/main/Threejs/PLYLoader.js';
+import { PLYLoader } from 'https://bztd.github.io/Threejs/PLYLoader.js';
 
 var idproceso;
 
@@ -23,7 +23,7 @@ function dibujar(){
     scene.add(light.target);
 ////////////////////////////////////////////////////////////////////////////////////
 	const loader = new PLYLoader();
-	loader.load( 'https://raw.githubusercontent.com/bztd/web/main/THREEJS_Superficie_estruc/13.ply', function ( geometry ) {
+	loader.load( 'https://bztd.github.io/THREEJS_Superficie_estruc/13.ply', function ( geometry ) {
 
 		geometry.computeVertexNormals();
 
