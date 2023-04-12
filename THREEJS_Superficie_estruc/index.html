@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="importmap">
+	{
+		"imports": {
+			"three": "../Threejs/three.module.js",
+			"OrbitControls": "../Threejs/OrbitControls.js"
+		}
+	}
+	</script>
+	<style>
+	.x{
+		visibility: hidden;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	</style>
+  </head>
+  <body>
+	  <img class='x' id='x' src='../img_cmn/x.svg'  height="40px"/>
+	  <input type='button' value='iniciar' id='ini'/>
+	  <div id='contenedor'></div>
+	  <script src='./dibujar.js' type='module'></script>
+  </body>
+</html>
