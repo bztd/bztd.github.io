@@ -30,25 +30,42 @@ function dibujar(){
 	var texto = document.createTextNode("Cargando...");
 	mensaje_carga.appendChild(texto);
 	
-	document.body.appendChild(mensaje_carga);
-	
-////////////////////////////////////////////////////////////////////////////////////
-	const loader = new PLYLoader();
-	loader.load( 'https://bztd.github.io/THREEJS_Superficie_estruc/13.ply', function ( geometry ) {
+	document.body.appendChild( mensaje_carga);
+	//////////////////////////////////
+    cargar_archivo()
+    function cargar_archivo(){
 
-		geometry.computeVertexNormals();
+		const manager = new THREE.LoadingManager();
 
-		const material = new THREE.MeshStandardMaterial( { color: 0xA3B4D5, flatShading: true } );
-		const mesh = new THREE.Mesh( geometry, material );
+		manager.onLoad = function (e) {
+			console.log( 'Carga Completa.');
+		};
+		manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
 
-		mesh.scale.multiplyScalar( 1 );//scale
+		};
+		manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
 
-		mesh.castShadow = true;
-		mesh.receiveShadow = true;
+		};
+		manager.onError = function ( url ) {
 
-		scene.add( mesh );
+		};
 
-	} );
+		const loader = new PLYLoader(manager);
+		loader.load( 'https://bztd.github.io/THREEJS_Superficie_estruc/13.ply', function ( geometry ) {
+
+			geometry.computeVertexNormals();
+
+			const material = new THREE.MeshStandardMaterial( { color: 0xA3B4D5, flatShading: true } );
+			const mesh = new THREE.Mesh( geometry, material );
+
+			mesh.castShadow = true;
+			mesh.receiveShadow = true;
+
+			scene.add( mesh );
+
+		} );
+	}
+
 // ///////////////////////////////////////////////////////////////////////////////////////
 	document.getElementById("carga").remove();
 ///////////////////////////////////////////////////////////////////////////////
