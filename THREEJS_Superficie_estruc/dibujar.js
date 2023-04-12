@@ -21,6 +21,17 @@ function dibujar(){
     light.target.position.set(-5, 0, 0);
     scene.add(light);
     scene.add(light.target);
+    
+    ///////////////////////////////////
+    
+    var mensaje_carga = document.createElement("p");
+	mensaje_carga.setAttribute('id','carga');
+	mensaje_carga.style='font-size: 30px;z-index:3;position:fixed;color: #52ddae;top: 0px;'
+	var texto = document.createTextNode("Cargando...");
+	mensaje_carga.appendChild(texto);
+	
+	document.body.appendChild(mensaje_carga);
+	
 ////////////////////////////////////////////////////////////////////////////////////
 	const loader = new PLYLoader();
 	loader.load( 'https://bztd.github.io/THREEJS_Superficie_estruc/13.ply', function ( geometry ) {
@@ -39,7 +50,7 @@ function dibujar(){
 
 	} );
 // ///////////////////////////////////////////////////////////////////////////////////////
-
+	document.getElementById("carga").remove();
 ///////////////////////////////////////////////////////////////////////////////
 
 	camera.position.set( 10, 3, 10 );
