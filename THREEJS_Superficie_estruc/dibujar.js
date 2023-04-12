@@ -38,6 +38,7 @@ function dibujar(){
 		const manager = new THREE.LoadingManager();
 
 		manager.onLoad = function (e) {
+			document.getElementById("carga").remove();
 			console.log( 'Carga Completa.');
 		};
 		manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
@@ -67,7 +68,7 @@ function dibujar(){
 	}
 
 // ///////////////////////////////////////////////////////////////////////////////////////
-	document.getElementById("carga").remove();
+	console.log(1);
 ///////////////////////////////////////////////////////////////////////////////
 
 	camera.position.set( 10, 3, 10 );
