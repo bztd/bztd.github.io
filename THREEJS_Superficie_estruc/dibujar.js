@@ -82,7 +82,7 @@ function cerrar(){
 
 function start(){
 	
-	contenedor.style="position: absolute;top:0px;left:0px;z-index:1;visibility:visible;\
+	contenedor.style="position: fixed;top:0px;left:0px;z-index:1;visibility:visible;\
 	margin:0px;padding:0px;width:100%;background: #01065F;height: 100%;";
 	imgx.style='visibility: visible;z-index:2'
 	
