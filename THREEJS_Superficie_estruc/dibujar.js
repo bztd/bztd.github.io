@@ -26,7 +26,8 @@ function dibujar(){
     
     var mensaje_carga = document.createElement("p");
 	mensaje_carga.setAttribute('id','carga');
-	mensaje_carga.style='font-size: 30px;z-index:3;position:fixed;color: #52ddae;top: 0px;'
+	mensaje_carga.style='font-size: 30px;z-index:3;position:fixed;\
+    color: #52ddae;left:40px;bottom:0px;'
 	var texto = document.createTextNode("Cargando...");
 	mensaje_carga.appendChild(texto);
 	
@@ -99,6 +100,7 @@ boton.addEventListener('click', start, false);
 
 var contenedor=document.getElementById("contenedor");
 var imgx=document.getElementById("x");
+var cont=false;
 
 function cerrar(){
 	
@@ -107,10 +109,17 @@ function cerrar(){
 	imgx.style='visibility: hidden;';
 	contenedor.style='visibility: hidden;';
 	contenedor.innerHTML='';
+    cont=false;
 }
 
 function start(){
 	
+    if(cont){
+
+		return 0;
+	}
+	cont=true;
+
 	contenedor.style="position: fixed;top:0px;left:0px;z-index:1;visibility:visible;\
 	margin:0px;padding:0px;width:100%;background: #01065F;height: 100%;";
 	imgx.style='visibility: visible;z-index:2'
