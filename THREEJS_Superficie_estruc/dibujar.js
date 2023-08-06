@@ -10,7 +10,8 @@ function dibujar(){
 	const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
 	
 	const renderer = new THREE.WebGLRenderer({ antialias: true });
-	renderer.setSize( window.innerWidth, "100%" );//window.innerHeight
+	renderer.setId("sCanvas");
+	renderer.setSize( window.innerWidth, window.innerHeight );
 	contenedor.appendChild( renderer.domElement );
 
 
@@ -78,6 +79,8 @@ function dibujar(){
 	const orb = new OrbitControls( camera, renderer.domElement );
 	orb.update();
 	
+	const scv = document.querySelector("canvas");
+	scv.style.width="100%";
 	
 	function animate() {
 		
