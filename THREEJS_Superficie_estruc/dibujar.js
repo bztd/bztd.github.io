@@ -10,7 +10,6 @@ function dibujar(){
 	const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
 	
 	const renderer = new THREE.WebGLRenderer({ antialias: true });
-	renderer.setId("sCanvas");
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	contenedor.appendChild( renderer.domElement );
 
