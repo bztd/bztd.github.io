@@ -69,7 +69,7 @@ function dibujar(){
 	}
 
 // ///////////////////////////////////////////////////////////////////////////////////////
-	console.log(1);
+	//console.log(1);
 ///////////////////////////////////////////////////////////////////////////////
 
 	camera.position.set( 10, 3, 10 );
@@ -77,6 +77,8 @@ function dibujar(){
 
 	const orb = new OrbitControls( camera, renderer.domElement );
 	orb.update();
+	
+	renderer.setSize( window.innerWidth, window.innerHeight );
 	
 	function animate() {
 		
