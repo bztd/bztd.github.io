@@ -1,7 +1,7 @@
 const conts=document.getElementsByClassName("contayner0");
 const container0=conts[0];
 const canvas = document.createElement('canvas');
-canvas.style="position: fixed;z-index: -1;width: 96%;height:100%;";
+canvas.style="position: fixed;z-index: -1;width: 96%;height:100%;top:10px";
 //container0.appendChild(canvas);
 container0.insertBefore(canvas, container0.firstChild);
 
