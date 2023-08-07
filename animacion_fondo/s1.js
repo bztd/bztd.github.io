@@ -2,7 +2,9 @@ const conts=document.getElementsByClassName("contayner0");
 const container0=conts[0];
 const canvas = document.createElement('canvas');
 canvas.style="position: fixed;z-index: -1;width: 96%;height:100%;";
-container0.appendChild(canvas);
+//container0.appendChild(canvas);
+container0.insertBefore(canvas, container0.firstChild);
+
 
 //const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
