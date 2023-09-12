@@ -102,7 +102,7 @@ const start_last_row=T-width;
 
 var canvas = document.createElement("canvas");
 canvas.setAttribute('id','cv');
-canvas.style='color: black;'
+canvas.style='color: black;position: absolute;'
 canvas.width=width;
 canvas.height=height;
 contenedor.appendChild(canvas);
