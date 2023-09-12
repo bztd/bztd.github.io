@@ -91,18 +91,20 @@ function generate_palette(palette){
 
 
 //////////////////////////////////////////////MAIN
-var canvas = document.getElementById('miCanvas');
-var ctx = canvas.getContext('2d');
-
 const width = 400;
 const height = 300;
 const T=width*height;
 const start_last_row=T-width;
 
-let loopId;
-
+var canvas = document.createElement("canvas");
+canvas.setAttribute('id','cv');
+canvas.style='color: black;'
 canvas.width=width;
 canvas.height=height;
+contenedor.appendChild(canvas);
+
+var ctx = canvas.getContext('2d');
+
 canvas.style.color= "#000";
 canvas.style.border= "#2e18c8 solid 1px";
 
