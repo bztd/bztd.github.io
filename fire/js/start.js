@@ -1,6 +1,6 @@
 var loopId;
 var contenedor=document.getElementById("contenedor");
-var f=function{};
+var f=function(){};
 ////////////////
 var imgx=document.getElementById("x");
 var boton=document.getElementById('init');
