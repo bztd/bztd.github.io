@@ -152,8 +152,8 @@ function cerrar(){
 function start(){
 
 	contenedor.style="position: fixed;top:0px;left:0px;z-index:1;visibility:visible;\
-	margin:0px;padding:0px;width:100%;background: #01065F;height: 100%;";
-	imgx.style='visibility: visible;z-index:2'
+	margin:0px;padding:0px;width:100%;background: #01065F;height: 100%;display: flex;justify-content: center;";
+	imgx.style='visibility: visible;z-index:2;'
 
 	imgx.addEventListener('click', cerrar, false);
 
