@@ -39,7 +39,7 @@ var _scarga={
 		//
 			_scarga.complete_items++;
 			
-			if(_scarga.message.bool){
+			if(_scarga.message.bool && !_scarga.abort){
 				
 				_scarga.message.print("..."+this.src);
 			}
@@ -227,9 +227,11 @@ function cerrar(){
 
 	//cancelAnimationFrame(loopId);
 	clearInterval(loopId);
+	
 	_scarga.message.bool=false;
-	_scarga.message.id_mess.value="";
 	_scarga.abort=true;
+	_scarga.message.clear();
+	
 	imgx.style='visibility: hidden;';
 	contenedor.style='display: none;';
 	//contenedor.style='visibility: hidden; ';
