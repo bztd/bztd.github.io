@@ -7,7 +7,15 @@ let urls=[
 	];
 
 function fillout(){
+  let cont=document.getElementById("containerDropdown");
+  let str="";
   
+  for(let i=0;i<urls.length;i++){
+     
+	str+=`<a href="${urls[i]}"><img src="${urls[i]}" class="imgsDropdown"></img></a>`;	
+  }
+
+  cont.innerHTML=str;
 }
 
 function cssdeploy(){
@@ -64,6 +72,7 @@ function adjust(){
    }
 }
 
+fillout();
 adjust();
 
 var eyelash=document.getElementById("pressDropdown");
