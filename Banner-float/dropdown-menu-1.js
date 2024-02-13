@@ -9,8 +9,8 @@ let urls=[
 
 function cssdeploy(){
   let temp=5+adjust_p;
-  let floating=document.getElementById("Dropdown");
-  floating.style.marginLeft=`${temp}px`;
+  let d=document.getElementById("Dropdown");
+  d.style.marginLeft=`${temp}px`;
   
 }
 
@@ -44,13 +44,14 @@ function adjust(){
 
    if(deploy==false){
 	adjust_p=-270-rect.left;
+	csscontrac();
    }else{
 	adjust_p=5-rect.left;
+  	cssdeploy();
    }
 }
 
 adjust();
-csscontrac();
 
 var eyelash=document.getElementById("pressDropdown");
 eyelash.addEventListener("click", bif);
