@@ -8,14 +8,14 @@ let urls=[
 
 
 function cssdeploy(){
-  let temp=5+ajust_p;
+  let temp=5+adjust_p;
   let floating=document.getElementById("floating");
   floating.style.marginLeft=`${temp}px`;
   
 }
 
 function csscontrac(){
-  let temp=-270+ajust_p;
+  let temp=-270+adjust_p;
   let floating=document.getElementById("floating");
   floating.style.marginLeft=`${temp}px`;
   
@@ -43,9 +43,9 @@ function adjust(){
    let rect = elemento.getBoundingClientRect();
 
    if(deploy==false){
-	ajust=-270-rect.left;
+	adjust_p=-270-rect.left;
    }else{
-	ajust=5-rect.left;
+	adjust_p=5-rect.left;
    }
 }
 
