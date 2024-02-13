@@ -1,4 +1,5 @@
 let deploy=false;
+let adjust_p=0;
 let urls=[
 	"https://bztd.github.io/mario/mm.png",
 	"https://bztd.github.io/mario/mm.png"
@@ -6,16 +7,16 @@ let urls=[
 
 
 function cssdeploy(){
-  
+  let temp=5+ajust;
   let floating=document.getElementById("floating");
   floating.style.marginLeft="5px";
   
 }
 
 function csscontrac(){
-  
+  let temp=-270+ajust;
   let floating=document.getElementById("floating");
-  floating.style.marginLeft="-270px";
+  floating.style.marginLeft=`${temp}px`;
   
 }
 
@@ -33,5 +34,23 @@ function bif(){
     
   } 
 }
-  var eyelash=document.getElementById("eyelash");
-  eyelash.addEventListener("click", bif);
+
+function adjust(){
+   let elemento = document.getElementById('Dropdown');
+
+   let rect = elemento.getBoundingClientRect();
+
+   if(deploy==false){
+	ajust=-270-rect.left;
+   }else{
+	ajust=5-rect.left;
+   }
+}
+
+adjust();
+csscontract();
+
+var eyelash=document.getElementById("pressDropdown");
+eyelash.addEventListener("click", bif);
+
+window.addEventListener("resize", );
