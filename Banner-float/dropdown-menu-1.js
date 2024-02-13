@@ -1,4 +1,9 @@
-var deploy=true;
+let deploy=false;
+let urls=[
+	"https://bztd.github.io/mario/mm.png",
+	"https://bztd.github.io/mario/mm.png"
+	];
+
 
 function cssdeploy(){
   
