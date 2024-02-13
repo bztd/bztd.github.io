@@ -1,0 +1,33 @@
+.Dropdown{
+  height: 98%;
+  border: 1px solid rgb(100, 26, 85);
+  position: fixed;
+  width: 270px;
+  margin-left: 5px;
+  top: 4px;
+  background-color: rgb(62, 62, 94);
+  display: flex;
+  overflow: hidden scroll;
+  transition: margin-left 0.5s ease 0s;
+}
+
+.imgsDropdown{
+  width: 93%;
+  border-radius: 10px;
+  border: solid 3px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.pressDropdown{
+  width: 30px;
+  height: 250px;
+  background-color: bisque;
+  overflow: scroll;
+  position: inherit;
+  margin-left: calc(270px);
+  border-radius: 0px 20px 20px 0px;
+  align-self: center;
+  box-shadow: 0 0 10px #770909, 0 0 10px #617d3e, 0 0 10px #fff, 0 0 10px #fffefe;
+}
+
