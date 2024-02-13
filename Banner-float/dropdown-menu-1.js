@@ -9,14 +9,14 @@ let urls=[
 
 function cssdeploy(){
   let temp=5+adjust_p;
-  let floating=document.getElementById("floating");
+  let floating=document.getElementById("Dropdown");
   floating.style.marginLeft=`${temp}px`;
   
 }
 
 function csscontrac(){
   let temp=-270+adjust_p;
-  let floating=document.getElementById("floating");
+  let floating=document.getElementById("Dropdown");
   floating.style.marginLeft=`${temp}px`;
   
 }
