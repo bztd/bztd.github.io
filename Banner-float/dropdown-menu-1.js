@@ -37,17 +37,16 @@ function csscontrac(){
 
 function bif(){
   
-	if(deploy==false){
+  if(deploy==false){
     
     deploy=true;
-    cssdeploy();
     
   } else{
     
     deploy=false;
-    csscontrac();
     
   } 
+  adjust();
 }
 
 function adjust(){
