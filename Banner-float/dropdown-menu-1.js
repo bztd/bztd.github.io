@@ -11,7 +11,7 @@ function cssdeploy(){
   let d=document.getElementById("Dropdown");
   let styles = window.getComputedStyle(d);
 
-  /pixels
+  //pixels
   let margin = parseInt(styles.marginLeft);
 
   let temp=margin+adjust_p;
@@ -25,7 +25,7 @@ function csscontrac(){
   let d=document.getElementById("Dropdown");
   let styles = window.getComputedStyle(d);
 
-  /pixels
+  //pixels
   let margin = parseInt(styles.marginLeft);
   
   let temp=margin+adjust_p;
