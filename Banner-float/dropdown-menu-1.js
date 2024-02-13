@@ -6,6 +6,9 @@ let urls=[
 	"https://bztd.github.io/mario/mm.png"
 	];
 
+function fillout(){
+  
+}
 
 function cssdeploy(){
   let d=document.getElementById("Dropdown");
@@ -15,7 +18,6 @@ function cssdeploy(){
   let margin = parseInt(styles.marginLeft);
 
   let temp=margin+adjust_p;
-  let d=document.getElementById("Dropdown");
   d.style.marginLeft=`${temp}px`;
   
 }
