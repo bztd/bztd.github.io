@@ -1,3 +1,4 @@
+
 let deploy=false;
 let adjust_p=0;
 let urls=[
@@ -7,14 +8,14 @@ let urls=[
 
 
 function cssdeploy(){
-  let temp=5+ajust;
+  let temp=5+ajust_p;
   let floating=document.getElementById("floating");
-  floating.style.marginLeft="5px";
+  floating.style.marginLeft=`${temp}px`;
   
 }
 
 function csscontrac(){
-  let temp=-270+ajust;
+  let temp=-270+ajust_p;
   let floating=document.getElementById("floating");
   floating.style.marginLeft=`${temp}px`;
   
@@ -36,6 +37,7 @@ function bif(){
 }
 
 function adjust(){
+
    let elemento = document.getElementById('Dropdown');
 
    let rect = elemento.getBoundingClientRect();
