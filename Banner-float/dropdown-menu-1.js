@@ -53,4 +53,4 @@ csscontract();
 var eyelash=document.getElementById("pressDropdown");
 eyelash.addEventListener("click", bif);
 
-window.addEventListener("resize", );
+window.addEventListener("resize",adjust);
