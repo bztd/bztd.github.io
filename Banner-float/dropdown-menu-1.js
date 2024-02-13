@@ -50,7 +50,7 @@ function adjust(){
 }
 
 adjust();
-csscontract();
+csscontrac();
 
 var eyelash=document.getElementById("pressDropdown");
 eyelash.addEventListener("click", bif);
