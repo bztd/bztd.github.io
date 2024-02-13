@@ -8,16 +8,28 @@ let urls=[
 
 
 function cssdeploy(){
-  let temp=5+adjust_p;
+  let d=document.getElementById("Dropdown");
+  let styles = window.getComputedStyle(d);
+
+  /pixels
+  let margin = parseInt(styles.marginLeft);
+
+  let temp=margin+adjust_p;
   let d=document.getElementById("Dropdown");
   d.style.marginLeft=`${temp}px`;
   
 }
 
 function csscontrac(){
-  let temp=-270+adjust_p;
-  let floating=document.getElementById("Dropdown");
-  floating.style.marginLeft=`${temp}px`;
+
+  let d=document.getElementById("Dropdown");
+  let styles = window.getComputedStyle(d);
+
+  /pixels
+  let margin = parseInt(styles.marginLeft);
+  
+  let temp=margin+adjust_p;
+  d.style.marginLeft=`${temp}px`;
   
 }
 
