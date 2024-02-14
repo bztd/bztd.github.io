@@ -2,8 +2,10 @@
 let deploy=false;
 let adjust_p=0;
 let urls=[
-	"https://bztd.github.io/mario/mm.png",
-	"https://bztd.github.io/mario/mm.png"
+    {url:"https://bztd.github.io/mario/mm.png",pag:"https://triitugames.blogspot.com/p/canvas-mario-v01.html"},
+	{url:"https://bztd.github.io/fire/fire.png",pag:"https://triitugames.blogspot.com/p/canvas-animacion-de-fuego.html"},
+    {url:"https://bztd.github.io/img_cmn/mini-volcan.png",pag:"https://triitugames.blogspot.com/p/threejs-modelo-en-tres-dimenciones-de.html"},
+    {url:"https://bztd.github.io/img_cmn/min-asteroids.png",pag:"http://triitugames.blogspot.com/p/canvas-asteroids.html"}
 	];
 
 function fillout(){
@@ -12,7 +14,7 @@ function fillout(){
   
   for(let i=0;i<urls.length;i++){
      
-	str+=`<a href="${urls[i]}"><img src="${urls[i]}" class="imgsDropdown"></img></a>`;	
+	str+=`<a href="${urls[i].pag}"><img src="${urls[i].url}" class="imgsDropdown"></img></a>`;
   }
 
   cont.innerHTML=str;
