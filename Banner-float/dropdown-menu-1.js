@@ -1,4 +1,4 @@
-
+(function(){
 let deploy=false;
 let adjust_p=0;
 let urls=[
@@ -81,3 +81,4 @@ var eyelash=document.getElementById("pressDropdown");
 eyelash.addEventListener("click", bif);
 
 window.addEventListener("resize",adjust);
+})();
