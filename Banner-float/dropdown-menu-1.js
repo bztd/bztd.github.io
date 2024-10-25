@@ -75,11 +75,16 @@ function adjust(){
    }
 }
 
-fillout();
-adjust();
+if(document.documentURI !== "http://triitugames.blogspot.com/"){}
 
-var eyelash=document.getElementById("pressDropdown");
-eyelash.addEventListener("click", bif);
+  fillout();
+  adjust();
 
-window.addEventListener("resize",adjust);
+  var eyelash=document.getElementById("pressDropdown");
+  eyelash.addEventListener("click", bif);
+
+  window.addEventListener("resize",adjust);
+
+}
+
 })();
