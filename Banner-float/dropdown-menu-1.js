@@ -75,7 +75,7 @@ function adjust(){
    }
 }
 
-if(document.documentURI !== "http://triitugames.blogspot.com/"){}
+if(document.documentURI !== "http://triitugames.blogspot.com/"){
 
   fillout();
   adjust();
