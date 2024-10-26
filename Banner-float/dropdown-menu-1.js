@@ -88,7 +88,7 @@ if( !document.documentURI.endsWith("triitugames.blogspot.com/") ){
 }else{
 	
   let elemento = document.getElementById('Dropdown');
-  d.style.display="none";
+  elemento.style.display="none";
 
 }
 
