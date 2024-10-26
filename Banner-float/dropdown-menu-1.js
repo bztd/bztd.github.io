@@ -75,7 +75,7 @@ function adjust(){
    }
 }
 
-if(document.documentURI !== "http://triitugames.blogspot.com/"){
+if( !document.documentURI.endsWith("triitugames.blogspot.com/") ){
 
   fillout();
   adjust();
@@ -84,6 +84,11 @@ if(document.documentURI !== "http://triitugames.blogspot.com/"){
   eyelash.addEventListener("click", bif);
 
   window.addEventListener("resize",adjust);
+
+}else{
+	
+  let elemento = document.getElementById('Dropdown');
+  d.style.display="none";
 
 }
 
