@@ -1,0 +1,2195 @@
+Running: chmod +x cmake_trilinos
+Running: ./cmake_trilinos
+Running with debug output on for the 'find' commands for package(s) HDF5.
+
+Configuring Trilinos build directory
+
+-- PROJECT_SOURCE_DIR='/run/build/trilinos'
+-- PROJECT_BINARY_DIR='/run/build/trilinos/build'
+-- Trilinos_TRIBITS_DIR='/run/build/trilinos/cmake/tribits'
+-- TriBITS_VERSION_STRING='0.9 (Dev)'
+-- CMAKE_VERSION='3.31.3'
+-- CMAKE_GENERATOR='Unix Makefiles'
+-- CMAKE_HOST_SYSTEM_NAME='Linux'
+-- Trilinos_HOSTNAME='ss'
+CMake Warning (dev) at cmake/tribits/core/package_arch/TribitsFindPythonInterp.cmake:64 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  cmake/tribits/core/package_arch/TribitsFindPythonInterp.cmake:80 (tribits_find_python)
+  cmake/tribits/core/package_arch/TribitsProjectImpl.cmake:109 (tribits_find_python_interp)
+  cmake/tribits/core/package_arch/TribitsProject.cmake:92 (tribits_project_impl)
+  CMakeLists.txt:48 (TRIBITS_PROJECT)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found PythonInterp: /usr/bin/python (found suitable version "3.12.8", minimum required is "2.6")
+-- PYTHON_EXECUTABLE='/usr/bin/python'
+-- Found Git: /usr/bin/git (found version "2.47.1")
+
+Setting up major user options ...
+
+-- The Current CXX Standard is : 17
+-- Setting Trilinos_ENABLE_TriKota=OFF because '/run/build/trilinos/packages/TriKota/Dakota' does not exist!
+-- Trilinos_GENERATE_REPO_VERSION_FILE='ON'
+
+NOTE: Skipping generation of TrilinosRepoVersion.txt because project source is not a git repo!
+
+Reading list of native TPLs from /run/build/trilinos/TPLsList.cmake
+
+-- After reading above TPLsList.cmake file: Trilinos_NUM_DEFINED_TPLS='124'
+
+Reading list of native packages from /run/build/trilinos/PackagesList.cmake
+
+-- After reading above PackagesList.cmake file: Trilinos_NUM_DEFINED_INTERNAL_TOPLEVEL_PACKAGES='60'
+
+Processing Project, Repository, and Package dependency files and building internal dependencies graph ...
+
+-- Trilinos_NUM_DEFINED_INTERNAL_PACKAGES='153'
+-- Tentatively enabling TPL 'DLlib'
+
+Package dependencies information:
+
+-- Trilinos_NUM_DEFINED_TPLS='124'
+
+-- Trilinos_NUM_DEFINED_INTERNAL_TOPLEVEL_PACKAGES='60'
+
+-- Trilinos_NUM_DEFINED_TOPLEVEL_PACKAGES='184'
+
+-- Trilinos_NUM_DEFINED_INTERNAL_PACKAGES='153'
+
+-- Trilinos_NUM_DEFINED_PACKAGES='277'
+
+Explicitly enabled top-level packages on input (by user):  0
+
+Explicitly enabled packages on input (by user):  0
+
+Explicitly disabled top-level packages on input (by user or by default):  TrilinosFrameworkTests TrilinosATDMConfigTests Gtest PyTrilinos PyTrilinos2 NewPackage 6
+
+Explicitly disabled packages on input (by user or by default):  TrilinosFrameworkTests TrilinosATDMConfigTests Gtest ShyLU_NodeBasker SEACASExotec2 STKMiddle_mesh STKSearchUtil STKTransferUtil STKMiddle_mesh_util PanzerExprEval PyTrilinos PyTrilinos2 NewPackage 13
+
+Explicitly enabled external packages/TPLs on input (by user):  MPI HDF5 DLlib 3
+
+Explicitly disabled external packages/TPLs on input (by user or by default):  gtest 1
+
+Disabling all packages that have a required dependency on disabled TPLs and optional package TPL support based on TPL_ENABLE_<TPL>=OFF ...
+
+
+Disabling subpackages for hard disables of parent packages due to Trilinos_ENABLE_<PARENT_PACKAGE>=OFF ...
+
+
+Disabling forward required packages and optional intra-package support that have a dependency on disabled packages Trilinos_ENABLE_<TRIBITS_PACKAGE>=OFF (or TPL_ENABLE_<TRIBITS_EXTERNAL_PACKAGE>=OFF) ...
+
+-- Setting Trilinos_ENABLE_STKNGP_TEST=OFF because STKNGP_TEST has a required library dependence on disabled package Gtest
+-- Setting MiniTensor_ENABLE_TESTS=OFF because MiniTensor has a required test/example dependence on disabled package Gtest
+-- Setting MiniTensor_ENABLE_EXAMPLES=OFF because MiniTensor has a required test/example dependence on disabled package Gtest
+-- Setting Intrepid_ENABLE_TESTS=OFF because Intrepid has a required test/example dependence on disabled package Gtest
+-- Setting Intrepid_ENABLE_EXAMPLES=OFF because Intrepid has a required test/example dependence on disabled package Gtest
+-- Setting Compadre_ENABLE_TESTS=OFF because Compadre has a required test/example dependence on disabled package Gtest
+-- Setting Compadre_ENABLE_EXAMPLES=OFF because Compadre has a required test/example dependence on disabled package Gtest
+-- Setting STKUtil_ENABLE_TESTS=OFF because STKUtil has a required test/example dependence on disabled package Gtest
+-- Setting STKUtil_ENABLE_EXAMPLES=OFF because STKUtil has a required test/example dependence on disabled package Gtest
+-- Setting STKCoupling_ENABLE_TESTS=OFF because STKCoupling has a required test/example dependence on disabled package Gtest
+-- Setting STKCoupling_ENABLE_EXAMPLES=OFF because STKCoupling has a required test/example dependence on disabled package Gtest
+-- Setting STKMath_ENABLE_TESTS=OFF because STKMath has a required test/example dependence on disabled package Gtest
+-- Setting STKMath_ENABLE_EXAMPLES=OFF because STKMath has a required test/example dependence on disabled package Gtest
+-- Setting STKSimd_ENABLE_TESTS=OFF because STKSimd has a required test/example dependence on disabled package Gtest
+-- Setting STKSimd_ENABLE_EXAMPLES=OFF because STKSimd has a required test/example dependence on disabled package Gtest
+-- Setting STKIO_ENABLE_TESTS=OFF because STKIO has a required test/example dependence on disabled package Gtest
+-- Setting STKIO_ENABLE_EXAMPLES=OFF because STKIO has a required test/example dependence on disabled package Gtest
+-- Setting STKTools_ENABLE_TESTS=OFF because STKTools has a required test/example dependence on disabled package Gtest
+-- Setting STKTools_ENABLE_EXAMPLES=OFF because STKTools has a required test/example dependence on disabled package Gtest
+-- Setting STKBalance_ENABLE_TESTS=OFF because STKBalance has a required test/example dependence on disabled package Gtest
+-- Setting STKBalance_ENABLE_EXAMPLES=OFF because STKBalance has a required test/example dependence on disabled package Gtest
+-- Setting STKUnit_test_utils_ENABLE_TESTS=OFF because STKUnit_test_utils has a required test/example dependence on disabled package Gtest
+-- Setting STKUnit_test_utils_ENABLE_EXAMPLES=OFF because STKUnit_test_utils has a required test/example dependence on disabled package Gtest
+-- Setting STKUnit_tests_ENABLE_TESTS=OFF because STKUnit_tests has a required test/example dependence on disabled package Gtest
+-- Setting STKUnit_tests_ENABLE_EXAMPLES=OFF because STKUnit_tests has a required test/example dependence on disabled package Gtest
+-- Setting STKDoc_tests_ENABLE_TESTS=OFF because STKDoc_tests has a required test/example dependence on disabled package Gtest
+-- Setting STKDoc_tests_ENABLE_EXAMPLES=OFF because STKDoc_tests has a required test/example dependence on disabled package Gtest
+-- Setting STKEmend_ENABLE_TESTS=OFF because STKEmend has a required test/example dependence on disabled package Gtest
+-- Setting STKEmend_ENABLE_EXAMPLES=OFF because STKEmend has a required test/example dependence on disabled package Gtest
+-- Setting Krino_ENABLE_TESTS=OFF because Krino has a required test/example dependence on disabled package Gtest
+-- Setting Krino_ENABLE_EXAMPLES=OFF because Krino has a required test/example dependence on disabled package Gtest
+-- Setting Trilinos_ENABLE_STKUnit_test_utils=OFF because STKUnit_test_utils has a required library dependence on disabled package STKNGP_TEST
+
+Enabling subpackages for hard enables of parent packages due to Trilinos_ENABLE_<PARENT_PACKAGE>=ON ...
+
+
+Enabling all packages that are not currently disabled because of Trilinos_ENABLE_ALL_PACKAGES=ON (Trilinos_ENABLE_SECONDARY_TESTED_CODE=ON) ...
+
+-- Setting Trilinos_ENABLE_Kokkos=ON
+-- Setting Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Trilinos_ENABLE_TeuchosParser=ON
+-- Setting Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting Trilinos_ENABLE_TeuchosComm=ON
+-- Setting Trilinos_ENABLE_TeuchosNumerics=ON
+-- Setting Trilinos_ENABLE_TeuchosRemainder=ON
+-- Setting Trilinos_ENABLE_TeuchosKokkosCompat=ON
+-- Setting Trilinos_ENABLE_TeuchosKokkosComm=ON
+-- Setting Trilinos_ENABLE_Teuchos=ON
+-- Setting Trilinos_ENABLE_KokkosKernels=ON
+-- Setting Trilinos_ENABLE_RTOp=ON
+-- Setting Trilinos_ENABLE_Sacado=ON
+-- Setting Trilinos_ENABLE_MiniTensor=ON
+-- Setting Trilinos_ENABLE_Epetra=ON
+-- Setting Trilinos_ENABLE_Zoltan=ON
+-- Setting Trilinos_ENABLE_Shards=ON
+-- Setting Trilinos_ENABLE_Triutils=ON
+-- Setting Trilinos_ENABLE_EpetraExt=ON
+-- Setting Trilinos_ENABLE_TpetraTSQR=ON
+-- Setting Trilinos_ENABLE_TpetraCore=ON
+-- Setting Trilinos_ENABLE_Tpetra=ON
+-- Setting Trilinos_ENABLE_TrilinosSS=ON
+-- Setting Trilinos_ENABLE_ThyraCore=ON
+-- Setting Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Trilinos_ENABLE_ThyraEpetraExtAdapters=ON
+-- Setting Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting Trilinos_ENABLE_Thyra=ON
+-- Setting Trilinos_ENABLE_Xpetra=ON
+-- Setting Trilinos_ENABLE_Isorropia=ON
+-- Setting Trilinos_ENABLE_Pliris=ON
+-- Setting Trilinos_ENABLE_AztecOO=ON
+-- Setting Trilinos_ENABLE_Galeri=ON
+-- Setting Trilinos_ENABLE_Amesos=ON
+-- Setting Trilinos_ENABLE_Pamgen=ON
+-- Setting Trilinos_ENABLE_Zoltan2Core=ON
+-- Setting Trilinos_ENABLE_Ifpack=ON
+-- Setting Trilinos_ENABLE_ML=ON
+-- Setting Trilinos_ENABLE_Belos=ON
+-- Setting Trilinos_ENABLE_ShyLU_NodeHTS=ON
+-- Setting Trilinos_ENABLE_ShyLU_NodeTacho=ON
+-- Setting Trilinos_ENABLE_ShyLU_NodeFastILU=ON
+-- Setting Trilinos_ENABLE_ShyLU_Node=ON
+-- Setting Trilinos_ENABLE_Amesos2=ON
+-- Setting Trilinos_ENABLE_SEACASExodus=ON
+-- Setting Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting Trilinos_ENABLE_SEACASExoIIv2for32=ON
+-- Setting Trilinos_ENABLE_SEACASNemesis=ON
+-- Setting Trilinos_ENABLE_SEACASIoss=ON
+-- Setting Trilinos_ENABLE_SEACASChaco=ON
+-- Setting Trilinos_ENABLE_SEACASAprepro_lib=ON
+-- Setting Trilinos_ENABLE_SEACASSupes=ON
+-- Setting Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting Trilinos_ENABLE_SEACASSVDI=ON
+-- Setting Trilinos_ENABLE_SEACASPLT=ON
+-- Setting Trilinos_ENABLE_SEACASAlgebra=ON
+-- Setting Trilinos_ENABLE_SEACASAprepro=ON
+-- Setting Trilinos_ENABLE_SEACASBlot=ON
+-- Setting Trilinos_ENABLE_SEACASConjoin=ON
+-- Setting Trilinos_ENABLE_SEACASEjoin=ON
+-- Setting Trilinos_ENABLE_SEACASEpu=ON
+-- Setting Trilinos_ENABLE_SEACASCpup=ON
+-- Setting Trilinos_ENABLE_SEACASExo2mat=ON
+-- Setting Trilinos_ENABLE_SEACASExodiff=ON
+-- Setting Trilinos_ENABLE_SEACASExomatlab=ON
+-- Setting Trilinos_ENABLE_SEACASExotxt=ON
+-- Setting Trilinos_ENABLE_SEACASExo_format=ON
+-- Setting Trilinos_ENABLE_SEACASEx1ex2v2=ON
+-- Setting Trilinos_ENABLE_SEACASFastq=ON
+-- Setting Trilinos_ENABLE_SEACASGjoin=ON
+-- Setting Trilinos_ENABLE_SEACASGen3D=ON
+-- Setting Trilinos_ENABLE_SEACASGenshell=ON
+-- Setting Trilinos_ENABLE_SEACASGrepos=ON
+-- Setting Trilinos_ENABLE_SEACASExplore=ON
+-- Setting Trilinos_ENABLE_SEACASMapvarlib=ON
+-- Setting Trilinos_ENABLE_SEACASMapvar=ON
+-- Setting Trilinos_ENABLE_SEACASMapvar-kd=ON
+-- Setting Trilinos_ENABLE_SEACASMat2exo=ON
+-- Setting Trilinos_ENABLE_SEACASNas2exo=ON
+-- Setting Trilinos_ENABLE_SEACASZellij=ON
+-- Setting Trilinos_ENABLE_SEACASNemslice=ON
+-- Setting Trilinos_ENABLE_SEACASNemspread=ON
+-- Setting Trilinos_ENABLE_SEACASNumbers=ON
+-- Setting Trilinos_ENABLE_SEACASSlice=ON
+-- Setting Trilinos_ENABLE_SEACASTxtexo=ON
+-- Setting Trilinos_ENABLE_SEACASEx2ex1v2=ON
+-- Setting Trilinos_ENABLE_SEACAS=ON
+-- Setting Trilinos_ENABLE_Anasazi=ON
+-- Setting Trilinos_ENABLE_Ifpack2=ON
+-- Setting Trilinos_ENABLE_Stratimikos=ON
+-- Setting Trilinos_ENABLE_Teko=ON
+-- Setting Trilinos_ENABLE_Intrepid=ON
+-- Setting Trilinos_ENABLE_Intrepid2=ON
+-- Setting Trilinos_ENABLE_Compadre=ON
+-- Setting Trilinos_ENABLE_STKUtil=ON
+-- Setting Trilinos_ENABLE_STKCoupling=ON
+-- Setting Trilinos_ENABLE_STKMath=ON
+-- Setting Trilinos_ENABLE_STKSimd=ON
+-- Setting Trilinos_ENABLE_STKExprEval=ON
+-- Setting Trilinos_ENABLE_STKTopology=ON
+-- Setting Trilinos_ENABLE_STKSearch=ON
+-- Setting Trilinos_ENABLE_STKTransfer=ON
+-- Setting Trilinos_ENABLE_STKMesh=ON
+-- Setting Trilinos_ENABLE_STKIO=ON
+-- Setting Trilinos_ENABLE_STKTools=ON
+-- Setting Trilinos_ENABLE_STKBalance=ON
+-- Setting Trilinos_ENABLE_STKUnit_tests=ON
+-- Setting Trilinos_ENABLE_STKDoc_tests=ON
+-- Setting Trilinos_ENABLE_STKEmend=ON
+-- Setting Trilinos_ENABLE_STK=ON
+-- Setting Trilinos_ENABLE_Percept=ON
+-- Setting Trilinos_ENABLE_Krino=ON
+-- Setting Trilinos_ENABLE_Phalanx=ON
+-- Setting Trilinos_ENABLE_NOX=ON
+-- Setting Trilinos_ENABLE_MueLu=ON
+-- Setting Trilinos_ENABLE_Zoltan2Sphynx=ON
+-- Setting Trilinos_ENABLE_Zoltan2=ON
+-- Setting Trilinos_ENABLE_ShyLU_DDFROSch=ON
+-- Setting Trilinos_ENABLE_ShyLU_DDCore=ON
+-- Setting Trilinos_ENABLE_ShyLU_DDCommon=ON
+-- Setting Trilinos_ENABLE_ShyLU_DD=ON
+-- Setting Trilinos_ENABLE_ShyLU=ON
+-- Setting Trilinos_ENABLE_Tempus=ON
+-- Setting Trilinos_ENABLE_Stokhos=ON
+-- Setting Trilinos_ENABLE_ROL=ON
+-- Setting Trilinos_ENABLE_Piro=ON
+-- Setting Trilinos_ENABLE_PanzerCore=ON
+-- Setting Trilinos_ENABLE_PanzerDofMgr=ON
+-- Setting Trilinos_ENABLE_PanzerDiscFE=ON
+-- Setting Trilinos_ENABLE_PanzerAdaptersSTK=ON
+-- Setting Trilinos_ENABLE_PanzerMiniEM=ON
+-- Setting Trilinos_ENABLE_Panzer=ON
+-- Setting Trilinos_ENABLE_Adelus=ON
+-- Setting Trilinos_ENABLE_TrilinosCouplings=ON
+-- Setting Trilinos_ENABLE_TrilinosBuildStats=ON
+-- Setting Trilinos_ENABLE_TrilinosInstallTests=ON
+
+Disabling subpackage tests/examples based on parent package tests/examples disables ...
+
+
+Enabling subpackage tests/examples based on parent package tests/examples enables ...
+
+
+Enabling all required (and optional since Trilinos_ENABLE_ALL_OPTIONAL_PACKAGES=ON) upstream packages for current set of enabled packages (Trilinos_ENABLE_SECONDARY_TESTED_CODE=ON) ...
+
+-- Setting TPL_ENABLE_BLAS=ON because Adelus has a required dependence on BLAS
+-- Setting TPL_ENABLE_LAPACK=ON because MueLu has a required dependence on LAPACK
+-- Setting TPL_ENABLE_Boost=ON because Krino has a required dependence on Boost
+-- Setting TPL_ENABLE_Matio=ON because SEACASMat2exo has a required dependence on Matio
+-- Setting TPL_ENABLE_X11=ON because SEACASSVDI has a required dependence on X11
+-- Setting TPL_ENABLE_Netcdf=ON because SEACASNemesis has a required dependence on Netcdf
+
+Enabling all optional intra-package enables <TRIBITS_PACKAGE>_ENABLE_<DEPPACKAGE> that are not currently disabled if both sets of packages are enabled ...
+
+-- NOT setting Kokkos_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- NOT setting Kokkos_ENABLE_CUDA=ON since CUDA is NOT enabled at this point!
+-- NOT setting Kokkos_ENABLE_HWLOC=ON since HWLOC is NOT enabled at this point!
+-- Setting Kokkos_ENABLE_DLlib=ON since Trilinos_ENABLE_Kokkos=ON AND TPL_ENABLE_DLlib=ON
+-- NOT setting Kokkos_ENABLE_CUSPARSE=ON since CUSPARSE is NOT enabled at this point!
+-- Setting TeuchosCore_ENABLE_Kokkos=ON since Trilinos_ENABLE_TeuchosCore=ON AND Trilinos_ENABLE_Kokkos=ON
+-- NOT setting TeuchosCore_ENABLE_BinUtils=ON since BinUtils is NOT enabled at this point!
+-- Setting TeuchosCore_ENABLE_Boost=ON since Trilinos_ENABLE_TeuchosCore=ON AND TPL_ENABLE_Boost=ON
+-- Setting TeuchosCore_ENABLE_MPI=ON since Trilinos_ENABLE_TeuchosCore=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting TeuchosCore_ENABLE_ARPREC=ON since ARPREC is NOT enabled at this point!
+-- NOT setting TeuchosCore_ENABLE_QD=ON since QD is NOT enabled at this point!
+-- NOT setting TeuchosCore_ENABLE_QT=ON since QT is NOT enabled at this point!
+-- NOT setting TeuchosCore_ENABLE_quadmath=ON since quadmath is NOT enabled at this point!
+-- NOT setting TeuchosCore_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- NOT setting TeuchosCore_ENABLE_Valgrind=ON since Valgrind is NOT enabled at this point!
+-- Setting TeuchosParser_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_TeuchosParser=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting TeuchosParameterList_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_TeuchosParameterList=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting TeuchosParameterList_ENABLE_TeuchosParser=ON since Trilinos_ENABLE_TeuchosParameterList=ON AND Trilinos_ENABLE_TeuchosParser=ON
+-- NOT setting TeuchosParameterList_ENABLE_yamlcpp=ON since yamlcpp is NOT enabled at this point!
+-- Setting TeuchosComm_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_TeuchosComm=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting TeuchosComm_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_TeuchosComm=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting TeuchosNumerics_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_TeuchosNumerics=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting TeuchosNumerics_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_TeuchosNumerics=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting TeuchosNumerics_ENABLE_BLAS=ON since Trilinos_ENABLE_TeuchosNumerics=ON AND TPL_ENABLE_BLAS=ON
+-- Setting TeuchosNumerics_ENABLE_LAPACK=ON since Trilinos_ENABLE_TeuchosNumerics=ON AND TPL_ENABLE_LAPACK=ON
+-- NOT setting TeuchosNumerics_ENABLE_Eigen=ON since Eigen is NOT enabled at this point!
+-- Setting TeuchosRemainder_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_TeuchosRemainder=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting TeuchosKokkosCompat_ENABLE_Kokkos=ON since Trilinos_ENABLE_TeuchosKokkosCompat=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting TeuchosKokkosCompat_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_TeuchosKokkosCompat=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting TeuchosKokkosCompat_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_TeuchosKokkosCompat=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- NOT setting TeuchosKokkosCompat_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- Setting TeuchosKokkosComm_ENABLE_Kokkos=ON since Trilinos_ENABLE_TeuchosKokkosComm=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting TeuchosKokkosComm_ENABLE_TeuchosKokkosCompat=ON since Trilinos_ENABLE_TeuchosKokkosComm=ON AND Trilinos_ENABLE_TeuchosKokkosCompat=ON
+-- Setting TeuchosKokkosComm_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_TeuchosKokkosComm=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting TeuchosKokkosComm_ENABLE_MPI=ON since Trilinos_ENABLE_TeuchosKokkosComm=ON AND TPL_ENABLE_MPI=ON
+-- Setting Teuchos_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Teuchos_ENABLE_TeuchosParser=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosParser=ON
+-- Setting Teuchos_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting Teuchos_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting Teuchos_ENABLE_TeuchosNumerics=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosNumerics=ON
+-- Setting Teuchos_ENABLE_TeuchosRemainder=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosRemainder=ON
+-- Setting Teuchos_ENABLE_TeuchosKokkosCompat=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosKokkosCompat=ON
+-- Setting Teuchos_ENABLE_TeuchosKokkosComm=ON since Trilinos_ENABLE_Teuchos=ON AND Trilinos_ENABLE_TeuchosKokkosComm=ON
+-- Setting KokkosKernels_ENABLE_Kokkos=ON since Trilinos_ENABLE_KokkosKernels=ON AND Trilinos_ENABLE_Kokkos=ON
+-- NOT setting KokkosKernels_ENABLE_quadmath=ON since quadmath is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_MKL=ON since MKL is NOT enabled at this point!
+-- Setting KokkosKernels_ENABLE_BLAS=ON since Trilinos_ENABLE_KokkosKernels=ON AND TPL_ENABLE_BLAS=ON
+-- Setting KokkosKernels_ENABLE_LAPACK=ON since Trilinos_ENABLE_KokkosKernels=ON AND TPL_ENABLE_LAPACK=ON
+-- NOT setting KokkosKernels_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_Cholmod=ON since Cholmod is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_CUBLAS=ON since CUBLAS is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_CUSPARSE=ON since CUSPARSE is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_CUSOLVER=ON since CUSOLVER is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_ROCBLAS=ON since ROCBLAS is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_ROCSPARSE=ON since ROCSPARSE is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_ROCSOLVER=ON since ROCSOLVER is NOT enabled at this point!
+-- NOT setting KokkosKernels_ENABLE_yamlcpp=ON since yamlcpp is NOT enabled at this point!
+-- Setting RTOp_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_RTOp=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting RTOp_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_RTOp=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting RTOp_ENABLE_TeuchosNumerics=ON since Trilinos_ENABLE_RTOp=ON AND Trilinos_ENABLE_TeuchosNumerics=ON
+-- Setting Sacado_ENABLE_Kokkos=ON since Trilinos_ENABLE_Sacado=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Sacado_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_Sacado=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Sacado_ENABLE_TeuchosNumerics=ON since Trilinos_ENABLE_Sacado=ON AND Trilinos_ENABLE_TeuchosNumerics=ON
+-- Setting Sacado_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_Sacado=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting Sacado_ENABLE_TeuchosKokkosComm=ON since Trilinos_ENABLE_Sacado=ON AND Trilinos_ENABLE_TeuchosKokkosComm=ON
+-- NOTE: Sacado_ENABLE_Kokkos=ON is already set!
+-- NOT setting Sacado_ENABLE_ADOLC=ON since ADOLC is NOT enabled at this point!
+-- NOT setting Sacado_ENABLE_ADIC=ON since ADIC is NOT enabled at this point!
+-- Setting MiniTensor_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_MiniTensor=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting MiniTensor_ENABLE_Kokkos=ON since Trilinos_ENABLE_MiniTensor=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting MiniTensor_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_MiniTensor=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting MiniTensor_ENABLE_Sacado=ON since Trilinos_ENABLE_MiniTensor=ON AND Trilinos_ENABLE_Sacado=ON
+-- NOT setting MiniTensor_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting Epetra_ENABLE_BLAS=ON since Trilinos_ENABLE_Epetra=ON AND TPL_ENABLE_BLAS=ON
+-- Setting Epetra_ENABLE_LAPACK=ON since Trilinos_ENABLE_Epetra=ON AND TPL_ENABLE_LAPACK=ON
+-- Setting Epetra_ENABLE_Teuchos=ON since Trilinos_ENABLE_Epetra=ON AND Trilinos_ENABLE_Teuchos=ON
+-- NOT setting Epetra_ENABLE_CASK=ON since CASK is NOT enabled at this point!
+-- Setting Epetra_ENABLE_MPI=ON since Trilinos_ENABLE_Epetra=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting Epetra_ENABLE_Oski=ON since Oski is NOT enabled at this point!
+-- Setting Zoltan_ENABLE_MPI=ON since Trilinos_ENABLE_Zoltan=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting Zoltan_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting Zoltan_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting Zoltan_ENABLE_PaToH=ON since PaToH is NOT enabled at this point!
+-- NOT setting Zoltan_ENABLE_Scotch=ON since Scotch is NOT enabled at this point!
+-- NOT setting Zoltan_ENABLE_Zlib=ON since Zlib is NOT enabled at this point!
+-- NOT setting Zoltan_ENABLE_OVIS=ON since OVIS is NOT enabled at this point!
+-- Setting Shards_ENABLE_Teuchos=ON since Trilinos_ENABLE_Shards=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Triutils_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_Triutils=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Triutils_ENABLE_Epetra=ON since Trilinos_ENABLE_Triutils=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting EpetraExt_ENABLE_Teuchos=ON since Trilinos_ENABLE_EpetraExt=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting EpetraExt_ENABLE_Epetra=ON since Trilinos_ENABLE_EpetraExt=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting EpetraExt_ENABLE_Triutils=ON since Trilinos_ENABLE_EpetraExt=ON AND Trilinos_ENABLE_Triutils=ON
+-- Setting EpetraExt_ENABLE_HDF5=ON since Trilinos_ENABLE_EpetraExt=ON AND TPL_ENABLE_HDF5=ON
+-- NOT setting EpetraExt_ENABLE_UMFPACK=ON since UMFPACK is NOT enabled at this point!
+-- NOT setting EpetraExt_ENABLE_AMD=ON since AMD is NOT enabled at this point!
+-- NOT setting EpetraExt_ENABLE_PETSC=ON since PETSC is NOT enabled at this point!
+-- NOT setting EpetraExt_ENABLE_HYPRE=ON since HYPRE is NOT enabled at this point!
+-- NOT setting EpetraExt_ENABLE_HYPRE=ON since HYPRE is NOT enabled at this point!
+-- Setting TpetraTSQR_ENABLE_Teuchos=ON since Trilinos_ENABLE_TpetraTSQR=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting TpetraTSQR_ENABLE_Kokkos=ON since Trilinos_ENABLE_TpetraTSQR=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting TpetraTSQR_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_TpetraTSQR=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- NOT setting TpetraTSQR_ENABLE_CUBLAS=ON since CUBLAS is NOT enabled at this point!
+-- NOT setting TpetraTSQR_ENABLE_CUSOLVER=ON since CUSOLVER is NOT enabled at this point!
+-- Setting TpetraCore_ENABLE_Teuchos=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting TpetraCore_ENABLE_Kokkos=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting TpetraCore_ENABLE_TeuchosKokkosCompat=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_TeuchosKokkosCompat=ON
+-- Setting TpetraCore_ENABLE_TeuchosKokkosComm=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_TeuchosKokkosComm=ON
+-- Setting TpetraCore_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting TpetraCore_ENABLE_Epetra=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting TpetraCore_ENABLE_TpetraTSQR=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_TpetraTSQR=ON
+-- Setting TpetraCore_ENABLE_TeuchosNumerics=ON since Trilinos_ENABLE_TpetraCore=ON AND Trilinos_ENABLE_TeuchosNumerics=ON
+-- Setting TpetraCore_ENABLE_MPI=ON since Trilinos_ENABLE_TpetraCore=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting TpetraCore_ENABLE_CUDA=ON since CUDA is NOT enabled at this point!
+-- NOT setting TpetraCore_ENABLE_QD=ON since QD is NOT enabled at this point!
+-- NOT setting TpetraCore_ENABLE_quadmath=ON since quadmath is NOT enabled at this point!
+-- NOT setting TpetraCore_ENABLE_mpi_advance=ON since mpi_advance is NOT enabled at this point!
+-- Setting Tpetra_ENABLE_TpetraCore=ON since Trilinos_ENABLE_Tpetra=ON AND Trilinos_ENABLE_TpetraCore=ON
+-- Setting Tpetra_ENABLE_TpetraTSQR=ON since Trilinos_ENABLE_Tpetra=ON AND Trilinos_ENABLE_TpetraTSQR=ON
+-- Setting ThyraCore_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_ThyraCore=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting ThyraCore_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_ThyraCore=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting ThyraCore_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_ThyraCore=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting ThyraCore_ENABLE_TeuchosNumerics=ON since Trilinos_ENABLE_ThyraCore=ON AND Trilinos_ENABLE_TeuchosNumerics=ON
+-- Setting ThyraCore_ENABLE_RTOp=ON since Trilinos_ENABLE_ThyraCore=ON AND Trilinos_ENABLE_RTOp=ON
+-- Setting ThyraEpetraAdapters_ENABLE_ThyraCore=ON since Trilinos_ENABLE_ThyraEpetraAdapters=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting ThyraEpetraAdapters_ENABLE_Epetra=ON since Trilinos_ENABLE_ThyraEpetraAdapters=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting ThyraEpetraAdapters_ENABLE_Triutils=ON since Trilinos_ENABLE_ThyraEpetraAdapters=ON AND Trilinos_ENABLE_Triutils=ON
+-- Setting ThyraEpetraExtAdapters_ENABLE_ThyraCore=ON since Trilinos_ENABLE_ThyraEpetraExtAdapters=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting ThyraEpetraExtAdapters_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_ThyraEpetraExtAdapters=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting ThyraEpetraExtAdapters_ENABLE_Epetra=ON since Trilinos_ENABLE_ThyraEpetraExtAdapters=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting ThyraEpetraExtAdapters_ENABLE_EpetraExt=ON since Trilinos_ENABLE_ThyraEpetraExtAdapters=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting ThyraTpetraAdapters_ENABLE_ThyraCore=ON since Trilinos_ENABLE_ThyraTpetraAdapters=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting ThyraTpetraAdapters_ENABLE_Tpetra=ON since Trilinos_ENABLE_ThyraTpetraAdapters=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting ThyraTpetraAdapters_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_ThyraTpetraAdapters=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Thyra_ENABLE_ThyraCore=ON since Trilinos_ENABLE_Thyra=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting Thyra_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_Thyra=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Thyra_ENABLE_ThyraEpetraExtAdapters=ON since Trilinos_ENABLE_Thyra=ON AND Trilinos_ENABLE_ThyraEpetraExtAdapters=ON
+-- Setting Thyra_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_Thyra=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting Xpetra_ENABLE_Teuchos=ON since Trilinos_ENABLE_Xpetra=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Xpetra_ENABLE_Kokkos=ON since Trilinos_ENABLE_Xpetra=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Xpetra_ENABLE_BLAS=ON since Trilinos_ENABLE_Xpetra=ON AND TPL_ENABLE_BLAS=ON
+-- Setting Xpetra_ENABLE_LAPACK=ON since Trilinos_ENABLE_Xpetra=ON AND TPL_ENABLE_LAPACK=ON
+-- NOTE: Xpetra_ENABLE_Epetra=OFF is already set so not enabling even though Trilinos_ENABLE_Epetra=ON is set!
+-- NOTE: Xpetra_ENABLE_EpetraExt=OFF is already set so not enabling even though Trilinos_ENABLE_EpetraExt=ON is set!
+-- Setting Xpetra_ENABLE_Tpetra=ON since Trilinos_ENABLE_Xpetra=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Xpetra_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Xpetra=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting Xpetra_ENABLE_Thyra=ON since Trilinos_ENABLE_Xpetra=ON AND Trilinos_ENABLE_Thyra=ON
+-- NOTE: Xpetra_ENABLE_Epetra=OFF is already set so not enabling even though Trilinos_ENABLE_Epetra=ON is set!
+-- NOTE: Xpetra_ENABLE_EpetraExt=OFF is already set so not enabling even though Trilinos_ENABLE_EpetraExt=ON is set!
+-- NOTE: Xpetra_ENABLE_Tpetra=ON is already set!
+-- NOTE: Xpetra_ENABLE_KokkosKernels=ON is already set!
+-- NOTE: Xpetra_ENABLE_Thyra=ON is already set!
+-- Setting Isorropia_ENABLE_Teuchos=ON since Trilinos_ENABLE_Isorropia=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Isorropia_ENABLE_Epetra=ON since Trilinos_ENABLE_Isorropia=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Isorropia_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Isorropia=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Isorropia_ENABLE_Zoltan=ON since Trilinos_ENABLE_Isorropia=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting Pliris_ENABLE_Epetra=ON since Trilinos_ENABLE_Pliris=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting AztecOO_ENABLE_Epetra=ON since Trilinos_ENABLE_AztecOO=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting AztecOO_ENABLE_Teuchos=ON since Trilinos_ENABLE_AztecOO=ON AND Trilinos_ENABLE_Teuchos=ON
+-- NOT setting AztecOO_ENABLE_y12m=ON since y12m is NOT enabled at this point!
+-- Setting AztecOO_ENABLE_Triutils=ON since Trilinos_ENABLE_AztecOO=ON AND Trilinos_ENABLE_Triutils=ON
+-- Setting Galeri_ENABLE_Teuchos=ON since Trilinos_ENABLE_Galeri=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Galeri_ENABLE_Epetra=ON since Trilinos_ENABLE_Galeri=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Galeri_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Galeri=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Galeri_ENABLE_Xpetra=ON since Trilinos_ENABLE_Galeri=ON AND Trilinos_ENABLE_Xpetra=ON
+-- Setting Galeri_ENABLE_Tpetra=ON since Trilinos_ENABLE_Galeri=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Galeri_ENABLE_Triutils=ON since Trilinos_ENABLE_Galeri=ON AND Trilinos_ENABLE_Triutils=ON
+-- Setting Amesos_ENABLE_Teuchos=ON since Trilinos_ENABLE_Amesos=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Amesos_ENABLE_Epetra=ON since Trilinos_ENABLE_Amesos=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Amesos_ENABLE_TrilinosSS=ON since Trilinos_ENABLE_Amesos=ON AND Trilinos_ENABLE_TrilinosSS=ON
+-- Setting Amesos_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Amesos=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- NOT setting Amesos_ENABLE_SuperLUDist=ON since SuperLUDist is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_UMFPACK=ON since UMFPACK is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_BLACS=ON since BLACS is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_SCALAPACK=ON since SCALAPACK is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_MUMPS=ON since MUMPS is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_TAUCS=ON since TAUCS is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_CSS_MKL=ON since CSS_MKL is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_PARDISO_MKL=ON since PARDISO_MKL is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_PARDISO=ON since PARDISO is NOT enabled at this point!
+-- NOT setting Amesos_ENABLE_CSparse=ON since CSparse is NOT enabled at this point!
+-- Setting Amesos_ENABLE_Triutils=ON since Trilinos_ENABLE_Amesos=ON AND Trilinos_ENABLE_Triutils=ON
+-- Setting Amesos_ENABLE_Galeri=ON since Trilinos_ENABLE_Amesos=ON AND Trilinos_ENABLE_Galeri=ON
+-- NOT setting Pamgen_ENABLE_ExodusII=ON since ExodusII is NOT enabled at this point!
+-- NOT setting Pamgen_ENABLE_Nemesis=ON since Nemesis is NOT enabled at this point!
+-- Setting Pamgen_ENABLE_Boost=ON since Trilinos_ENABLE_Pamgen=ON AND TPL_ENABLE_Boost=ON
+-- Setting Zoltan2Core_ENABLE_Tpetra=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Zoltan2Core_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Zoltan2Core_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting Zoltan2Core_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting Zoltan2Core_ENABLE_Xpetra=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_Xpetra=ON
+-- Setting Zoltan2Core_ENABLE_Zoltan=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting Zoltan2Core_ENABLE_Epetra=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_Epetra=ON
+-- NOT setting Zoltan2Core_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_PaToH=ON since PaToH is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_PuLP=ON since PuLP is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_Scotch=ON since Scotch is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_SARMA=ON since SARMA is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_AMD=ON since AMD is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_OVIS=ON since OVIS is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_TopoManager=ON since TopoManager is NOT enabled at this point!
+-- NOTE: Zoltan2Core_ENABLE_Tpetra=ON is already set!
+-- NOTE: Zoltan2Core_ENABLE_TeuchosCore=ON is already set!
+-- NOTE: Zoltan2Core_ENABLE_TeuchosComm=ON is already set!
+-- NOTE: Zoltan2Core_ENABLE_TeuchosParameterList=ON is already set!
+-- NOTE: Zoltan2Core_ENABLE_Xpetra=ON is already set!
+-- NOTE: Zoltan2Core_ENABLE_Zoltan=ON is already set!
+-- NOTE: Zoltan2Core_ENABLE_Epetra=ON is already set!
+-- Setting Zoltan2Core_ENABLE_Galeri=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_Galeri=ON
+-- Setting Zoltan2Core_ENABLE_Pamgen=ON since Trilinos_ENABLE_Zoltan2Core=ON AND Trilinos_ENABLE_Pamgen=ON
+-- NOT setting Zoltan2Core_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_PaToH=ON since PaToH is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_PuLP=ON since PuLP is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_Scotch=ON since Scotch is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_SARMA=ON since SARMA is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_AMD=ON since AMD is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_OVIS=ON since OVIS is NOT enabled at this point!
+-- NOT setting Zoltan2Core_ENABLE_TopoManager=ON since TopoManager is NOT enabled at this point!
+-- Setting Ifpack_ENABLE_Teuchos=ON since Trilinos_ENABLE_Ifpack=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Ifpack_ENABLE_Epetra=ON since Trilinos_ENABLE_Ifpack=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Ifpack_ENABLE_Amesos=ON since Trilinos_ENABLE_Ifpack=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting Ifpack_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Ifpack=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Ifpack_ENABLE_AztecOO=ON since Trilinos_ENABLE_Ifpack=ON AND Trilinos_ENABLE_AztecOO=ON
+-- NOT setting Ifpack_ENABLE_HYPRE=ON since HYPRE is NOT enabled at this point!
+-- NOT setting Ifpack_ENABLE_HIPS=ON since HIPS is NOT enabled at this point!
+-- NOT setting Ifpack_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- NOT setting Ifpack_ENABLE_SPARSKIT=ON since SPARSKIT is NOT enabled at this point!
+-- Setting Ifpack_ENABLE_Boost=ON since Trilinos_ENABLE_Ifpack=ON AND TPL_ENABLE_Boost=ON
+-- Setting Ifpack_ENABLE_Galeri=ON since Trilinos_ENABLE_Ifpack=ON AND Trilinos_ENABLE_Galeri=ON
+-- NOT setting Ifpack_ENABLE_HYPRE=ON since HYPRE is NOT enabled at this point!
+-- NOT setting Ifpack_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- NOT setting Ifpack_ENABLE_SPARSKIT=ON since SPARSKIT is NOT enabled at this point!
+-- Setting ML_ENABLE_BLAS=ON since Trilinos_ENABLE_ML=ON AND TPL_ENABLE_BLAS=ON
+-- Setting ML_ENABLE_LAPACK=ON since Trilinos_ENABLE_ML=ON AND TPL_ENABLE_LAPACK=ON
+-- Setting ML_ENABLE_Teuchos=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting ML_ENABLE_Epetra=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting ML_ENABLE_Zoltan=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting ML_ENABLE_Galeri=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_Galeri=ON
+-- Setting ML_ENABLE_Amesos=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting ML_ENABLE_Ifpack=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting ML_ENABLE_AztecOO=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting ML_ENABLE_EpetraExt=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting ML_ENABLE_Isorropia=ON since Trilinos_ENABLE_ML=ON AND Trilinos_ENABLE_Isorropia=ON
+-- Setting ML_ENABLE_MPI=ON since Trilinos_ENABLE_ML=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting ML_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting ML_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting ML_ENABLE_PETSC=ON since PETSC is NOT enabled at this point!
+-- NOT setting ML_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- NOT setting ML_ENABLE_MATLAB=ON since MATLAB is NOT enabled at this point!
+-- NOT setting ML_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting ML_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting ML_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- Setting Belos_ENABLE_Teuchos=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Belos_ENABLE_Epetra=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Belos_ENABLE_Tpetra=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Belos_ENABLE_Xpetra=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Xpetra=ON
+-- Setting Belos_ENABLE_Thyra=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Thyra=ON
+-- Setting Belos_ENABLE_AztecOO=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting Belos_ENABLE_Triutils=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Triutils=ON
+-- Setting Belos_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting Belos_ENABLE_Galeri=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Galeri=ON
+-- NOTE: Belos_ENABLE_Triutils=ON is already set!
+-- Setting Belos_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Belos_ENABLE_Ifpack=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting Belos_ENABLE_ML=ON since Trilinos_ENABLE_Belos=ON AND Trilinos_ENABLE_ML=ON
+-- NOTE: Belos_ENABLE_AztecOO=ON is already set!
+-- Setting ShyLU_NodeHTS_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_ShyLU_NodeHTS=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- NOT setting ShyLU_NodeHTS_ENABLE_MKL=ON since MKL is NOT enabled at this point!
+-- Setting ShyLU_NodeHTS_ENABLE_BLAS=ON since Trilinos_ENABLE_ShyLU_NodeHTS=ON AND TPL_ENABLE_BLAS=ON
+-- Setting ShyLU_NodeTacho_ENABLE_Kokkos=ON since Trilinos_ENABLE_ShyLU_NodeTacho=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting ShyLU_NodeTacho_ENABLE_TrilinosSS=ON since Trilinos_ENABLE_ShyLU_NodeTacho=ON AND Trilinos_ENABLE_TrilinosSS=ON
+-- NOT setting ShyLU_NodeTacho_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_MKL=ON since MKL is NOT enabled at this point!
+-- Setting ShyLU_NodeTacho_ENABLE_LAPACK=ON since Trilinos_ENABLE_ShyLU_NodeTacho=ON AND TPL_ENABLE_LAPACK=ON
+-- Setting ShyLU_NodeTacho_ENABLE_BLAS=ON since Trilinos_ENABLE_ShyLU_NodeTacho=ON AND TPL_ENABLE_BLAS=ON
+-- NOT setting ShyLU_NodeTacho_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_QTHREAD=ON since QTHREAD is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_VTune=ON since VTune is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUSOLVER=ON since CUSOLVER is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUSPARSE=ON since CUSPARSE is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUBLAS=ON since CUBLAS is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUDA=ON since CUDA is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_ROCSOLVER=ON since ROCSOLVER is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_ROCBLAS=ON since ROCBLAS is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_ROCSPARSE=ON since ROCSPARSE is NOT enabled at this point!
+-- NOTE: ShyLU_NodeTacho_ENABLE_Kokkos=ON is already set!
+-- NOTE: ShyLU_NodeTacho_ENABLE_TrilinosSS=ON is already set!
+-- NOT setting ShyLU_NodeTacho_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- NOTE: ShyLU_NodeTacho_ENABLE_BLAS=ON is already set!
+-- NOTE: ShyLU_NodeTacho_ENABLE_LAPACK=ON is already set!
+-- NOT setting ShyLU_NodeTacho_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_Cholmod=ON since Cholmod is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_MKL=ON since MKL is NOT enabled at this point!
+-- NOTE: ShyLU_NodeTacho_ENABLE_LAPACK=ON is already set!
+-- NOTE: ShyLU_NodeTacho_ENABLE_BLAS=ON is already set!
+-- NOT setting ShyLU_NodeTacho_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_QTHREAD=ON since QTHREAD is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUSOLVER=ON since CUSOLVER is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUSPARSE=ON since CUSPARSE is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUBLAS=ON since CUBLAS is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_CUDA=ON since CUDA is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_ROCSOLVER=ON since ROCSOLVER is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_ROCBLAS=ON since ROCBLAS is NOT enabled at this point!
+-- NOT setting ShyLU_NodeTacho_ENABLE_ROCSPARSE=ON since ROCSPARSE is NOT enabled at this point!
+-- Setting ShyLU_NodeFastILU_ENABLE_Kokkos=ON since Trilinos_ENABLE_ShyLU_NodeFastILU=ON AND Trilinos_ENABLE_Kokkos=ON
+-- NOTE: ShyLU_NodeFastILU_ENABLE_Kokkos=ON is already set!
+-- Setting ShyLU_Node_ENABLE_ShyLU_NodeHTS=ON since Trilinos_ENABLE_ShyLU_Node=ON AND Trilinos_ENABLE_ShyLU_NodeHTS=ON
+-- Setting ShyLU_Node_ENABLE_ShyLU_NodeTacho=ON since Trilinos_ENABLE_ShyLU_Node=ON AND Trilinos_ENABLE_ShyLU_NodeTacho=ON
+-- Setting ShyLU_Node_ENABLE_ShyLU_NodeFastILU=ON since Trilinos_ENABLE_ShyLU_Node=ON AND Trilinos_ENABLE_ShyLU_NodeFastILU=ON
+-- Setting Amesos2_ENABLE_Teuchos=ON since Trilinos_ENABLE_Amesos2=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Amesos2_ENABLE_Tpetra=ON since Trilinos_ENABLE_Amesos2=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Amesos2_ENABLE_TrilinosSS=ON since Trilinos_ENABLE_Amesos2=ON AND Trilinos_ENABLE_TrilinosSS=ON
+-- Setting Amesos2_ENABLE_Kokkos=ON since Trilinos_ENABLE_Amesos2=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Amesos2_ENABLE_Epetra=ON since Trilinos_ENABLE_Amesos2=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Amesos2_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Amesos2=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Amesos2_ENABLE_ShyLU_NodeTacho=ON since Trilinos_ENABLE_Amesos2=ON AND Trilinos_ENABLE_ShyLU_NodeTacho=ON
+-- Setting Amesos2_ENABLE_MPI=ON since Trilinos_ENABLE_Amesos2=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting Amesos2_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_SuperLUMT=ON since SuperLUMT is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_SuperLUDist=ON since SuperLUDist is NOT enabled at this point!
+-- Setting Amesos2_ENABLE_LAPACK=ON since Trilinos_ENABLE_Amesos2=ON AND TPL_ENABLE_LAPACK=ON
+-- NOT setting Amesos2_ENABLE_UMFPACK=ON since UMFPACK is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_PARDISO_MKL=ON since PARDISO_MKL is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_CSS_MKL=ON since CSS_MKL is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_Cholmod=ON since Cholmod is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_MUMPS=ON since MUMPS is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_STRUMPACK=ON since STRUMPACK is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_CUSPARSE=ON since CUSPARSE is NOT enabled at this point!
+-- NOT setting Amesos2_ENABLE_CUSOLVER=ON since CUSOLVER is NOT enabled at this point!
+-- NOTE: Amesos2_ENABLE_ShyLU_NodeTacho=ON is already set!
+-- NOTE: Amesos2_ENABLE_Kokkos=ON is already set!
+-- NOTE: Amesos2_ENABLE_TrilinosSS=ON is already set!
+-- Setting SEACASExodus_ENABLE_Netcdf=ON since Trilinos_ENABLE_SEACASExodus=ON AND TPL_ENABLE_Netcdf=ON
+-- NOT setting SEACASExodus_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- Setting SEACASExodus_ENABLE_HDF5=ON since Trilinos_ENABLE_SEACASExodus=ON AND TPL_ENABLE_HDF5=ON
+-- NOT setting SEACASExodus_ENABLE_Pnetcdf=ON since Pnetcdf is NOT enabled at this point!
+-- Setting SEACASExodus_ENABLE_MPI=ON since Trilinos_ENABLE_SEACASExodus=ON AND TPL_ENABLE_MPI=ON
+-- NOTE: SEACASExodus_ENABLE_Netcdf=ON is already set!
+-- NOT setting SEACASExodus_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- Setting SEACASExodus_for_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASExodus_for=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASExodus_for_ENABLE_Netcdf=ON since Trilinos_ENABLE_SEACASExodus_for=ON AND TPL_ENABLE_Netcdf=ON
+-- NOTE: SEACASExodus_for_ENABLE_Netcdf=ON is already set!
+-- Setting SEACASExoIIv2for32_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASExoIIv2for32=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASExoIIv2for32_ENABLE_Netcdf=ON since Trilinos_ENABLE_SEACASExoIIv2for32=ON AND TPL_ENABLE_Netcdf=ON
+-- NOTE: SEACASExoIIv2for32_ENABLE_Netcdf=ON is already set!
+-- Setting SEACASNemesis_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASNemesis=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASNemesis_ENABLE_Netcdf=ON since Trilinos_ENABLE_SEACASNemesis=ON AND TPL_ENABLE_Netcdf=ON
+-- NOT setting SEACASNemesis_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- Setting SEACASNemesis_ENABLE_HDF5=ON since Trilinos_ENABLE_SEACASNemesis=ON AND TPL_ENABLE_HDF5=ON
+-- NOT setting SEACASNemesis_ENABLE_Pnetcdf=ON since Pnetcdf is NOT enabled at this point!
+-- Setting SEACASNemesis_ENABLE_MPI=ON since Trilinos_ENABLE_SEACASNemesis=ON AND TPL_ENABLE_MPI=ON
+-- NOTE: SEACASNemesis_ENABLE_Netcdf=ON is already set!
+-- Setting SEACASIoss_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASIoss=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASIoss_ENABLE_Pamgen=ON since Trilinos_ENABLE_SEACASIoss=ON AND Trilinos_ENABLE_Pamgen=ON
+-- Setting SEACASIoss_ENABLE_Zoltan=ON since Trilinos_ENABLE_SEACASIoss=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting SEACASIoss_ENABLE_Kokkos=ON since Trilinos_ENABLE_SEACASIoss=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting SEACASIoss_ENABLE_HDF5=ON since Trilinos_ENABLE_SEACASIoss=ON AND TPL_ENABLE_HDF5=ON
+-- NOT setting SEACASIoss_ENABLE_CGNS=ON since CGNS is NOT enabled at this point!
+-- NOT setting SEACASIoss_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting SEACASIoss_ENABLE_Faodel=ON since Faodel is NOT enabled at this point!
+-- NOT setting SEACASIoss_ENABLE_Cereal=ON since Cereal is NOT enabled at this point!
+-- Setting SEACASIoss_ENABLE_DLlib=ON since Trilinos_ENABLE_SEACASIoss=ON AND TPL_ENABLE_DLlib=ON
+-- NOT setting SEACASIoss_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- NOT setting SEACASIoss_ENABLE_DataWarp=ON since DataWarp is NOT enabled at this point!
+-- NOT setting SEACASIoss_ENABLE_ADIOS2=ON since ADIOS2 is NOT enabled at this point!
+-- NOT setting SEACASIoss_ENABLE_Catalyst2=ON since Catalyst2 is NOT enabled at this point!
+-- Setting SEACASAprepro_lib_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASAprepro_lib=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- NOT setting SEACASAprepro_lib_ENABLE_Pthread=ON since Pthread is NOT enabled at this point!
+-- Setting SEACASSuplib_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASSuplib=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASSVDI_ENABLE_X11=ON since Trilinos_ENABLE_SEACASSVDI=ON AND TPL_ENABLE_X11=ON
+-- Setting SEACASPLT_ENABLE_SEACASSVDI=ON since Trilinos_ENABLE_SEACASPLT=ON AND Trilinos_ENABLE_SEACASSVDI=ON
+-- Setting SEACASAlgebra_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASAlgebra=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASAlgebra_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASAlgebra=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASAlgebra_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASAlgebra=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASAprepro_ENABLE_SEACASAprepro_lib=ON since Trilinos_ENABLE_SEACASAprepro=ON AND Trilinos_ENABLE_SEACASAprepro_lib=ON
+-- Setting SEACASBlot_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASBlot=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASBlot_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASBlot=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASBlot_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASBlot=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASBlot_ENABLE_SEACASPLT=ON since Trilinos_ENABLE_SEACASBlot=ON AND Trilinos_ENABLE_SEACASPLT=ON
+-- Setting SEACASConjoin_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASConjoin=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASConjoin_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASConjoin=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASConjoin_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASConjoin=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASEjoin_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASEjoin=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASEjoin_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_SEACASEjoin=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting SEACASEjoin_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASEjoin=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASEjoin_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASEjoin=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASEpu_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASEpu=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASEpu_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASEpu=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASEpu_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASEpu=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASCpup_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASCpup=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASCpup_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_SEACASCpup=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting SEACASCpup_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASCpup=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASCpup_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASCpup=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASExo2mat_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASExo2mat=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASExo2mat_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASExo2mat=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASExo2mat_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASExo2mat=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASExo2mat_ENABLE_Matio=ON since Trilinos_ENABLE_SEACASExo2mat=ON AND TPL_ENABLE_Matio=ON
+-- Setting SEACASExodiff_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASExodiff=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASExodiff_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASExodiff=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASExodiff_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASExodiff=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASExomatlab_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_SEACASExomatlab=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting SEACASExomatlab_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASExomatlab=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASExomatlab_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASExomatlab=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASExotxt_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASExotxt=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASExotxt_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASExotxt=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASExotxt_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASExotxt=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASExo_format_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASExo_format=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASEx1ex2v2_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASEx1ex2v2=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASEx1ex2v2_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASEx1ex2v2=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASEx1ex2v2_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASEx1ex2v2=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASFastq_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASFastq=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASFastq_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASFastq=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASFastq_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASFastq=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASFastq_ENABLE_SEACASPLT=ON since Trilinos_ENABLE_SEACASFastq=ON AND Trilinos_ENABLE_SEACASPLT=ON
+-- Setting SEACASGjoin_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASGjoin=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASGjoin_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASGjoin=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASGjoin_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASGjoin=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASGen3D_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASGen3D=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASGen3D_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASGen3D=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASGen3D_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASGen3D=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASGenshell_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASGenshell=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASGenshell_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASGenshell=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASGenshell_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASGenshell=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASGrepos_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASGrepos=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASGrepos_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASGrepos=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASGrepos_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASGrepos=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASExplore_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASExplore=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASExplore_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASExplore=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASExplore_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASExplore=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASMapvarlib_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASMapvarlib=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASMapvarlib_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASMapvarlib=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASMapvarlib_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASMapvarlib=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASMapvar_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASMapvar=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASMapvar_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASMapvar=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASMapvar_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASMapvar=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASMapvar_ENABLE_SEACASMapvarlib=ON since Trilinos_ENABLE_SEACASMapvar=ON AND Trilinos_ENABLE_SEACASMapvarlib=ON
+-- Setting SEACASMapvar-kd_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASMapvar-kd=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASMapvar-kd_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASMapvar-kd=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASMapvar-kd_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASMapvar-kd=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASMapvar-kd_ENABLE_SEACASMapvarlib=ON since Trilinos_ENABLE_SEACASMapvar-kd=ON AND Trilinos_ENABLE_SEACASMapvarlib=ON
+-- Setting SEACASMat2exo_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASMat2exo=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASMat2exo_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASMat2exo=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASMat2exo_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASMat2exo=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASMat2exo_ENABLE_Matio=ON since Trilinos_ENABLE_SEACASMat2exo=ON AND TPL_ENABLE_Matio=ON
+-- Setting SEACASNas2exo_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASNas2exo=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASNas2exo_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASNas2exo=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASNas2exo_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASNas2exo=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASZellij_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASZellij=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASZellij_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_SEACASZellij=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting SEACASZellij_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASZellij=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASZellij_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASZellij=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASZellij_ENABLE_Zoltan=ON since Trilinos_ENABLE_SEACASZellij=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting SEACASNemslice_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASNemslice=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASNemslice_ENABLE_SEACASChaco=ON since Trilinos_ENABLE_SEACASNemslice=ON AND Trilinos_ENABLE_SEACASChaco=ON
+-- Setting SEACASNemslice_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASNemslice=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASNemslice_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASNemslice=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASNemslice_ENABLE_Zoltan=ON since Trilinos_ENABLE_SEACASNemslice=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting SEACASNemspread_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASNemspread=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASNemspread_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASNemspread=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASNemspread_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASNemspread=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASNumbers_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASNumbers=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASNumbers_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASNumbers=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASNumbers_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASNumbers=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASSlice_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACASSlice=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACASSlice_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_SEACASSlice=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting SEACASSlice_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACASSlice=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACASSlice_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACASSlice=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACASSlice_ENABLE_Zoltan=ON since Trilinos_ENABLE_SEACASSlice=ON AND Trilinos_ENABLE_Zoltan=ON
+-- NOT setting SEACASSlice_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- Setting SEACASTxtexo_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASTxtexo=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASTxtexo_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASTxtexo=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASTxtexo_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASTxtexo=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACASEx2ex1v2_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACASEx2ex1v2=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACASEx2ex1v2_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACASEx2ex1v2=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACASEx2ex1v2_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACASEx2ex1v2=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACAS_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting SEACAS_ENABLE_SEACASExodus_for=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExodus_for=ON
+-- Setting SEACAS_ENABLE_SEACASExoIIv2for32=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExoIIv2for32=ON
+-- Setting SEACAS_ENABLE_SEACASNemesis=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASNemesis=ON
+-- Setting SEACAS_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting SEACAS_ENABLE_SEACASChaco=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASChaco=ON
+-- Setting SEACAS_ENABLE_SEACASAprepro_lib=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASAprepro_lib=ON
+-- Setting SEACAS_ENABLE_SEACASSupes=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASSupes=ON
+-- Setting SEACAS_ENABLE_SEACASSuplib=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASSuplib=ON
+-- Setting SEACAS_ENABLE_SEACASSuplibC=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASSuplibC=ON
+-- Setting SEACAS_ENABLE_SEACASSuplibCpp=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASSuplibCpp=ON
+-- Setting SEACAS_ENABLE_SEACASSVDI=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASSVDI=ON
+-- Setting SEACAS_ENABLE_SEACASPLT=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASPLT=ON
+-- Setting SEACAS_ENABLE_SEACASAlgebra=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASAlgebra=ON
+-- Setting SEACAS_ENABLE_SEACASAprepro=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASAprepro=ON
+-- Setting SEACAS_ENABLE_SEACASBlot=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASBlot=ON
+-- Setting SEACAS_ENABLE_SEACASConjoin=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASConjoin=ON
+-- Setting SEACAS_ENABLE_SEACASEjoin=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASEjoin=ON
+-- Setting SEACAS_ENABLE_SEACASEpu=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASEpu=ON
+-- Setting SEACAS_ENABLE_SEACASCpup=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASCpup=ON
+-- Setting SEACAS_ENABLE_SEACASExo2mat=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExo2mat=ON
+-- Setting SEACAS_ENABLE_SEACASExodiff=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExodiff=ON
+-- Setting SEACAS_ENABLE_SEACASExomatlab=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExomatlab=ON
+-- Setting SEACAS_ENABLE_SEACASExotxt=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExotxt=ON
+-- Setting SEACAS_ENABLE_SEACASExo_format=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExo_format=ON
+-- Setting SEACAS_ENABLE_SEACASEx1ex2v2=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASEx1ex2v2=ON
+-- Setting SEACAS_ENABLE_SEACASFastq=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASFastq=ON
+-- Setting SEACAS_ENABLE_SEACASGjoin=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASGjoin=ON
+-- Setting SEACAS_ENABLE_SEACASGen3D=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASGen3D=ON
+-- Setting SEACAS_ENABLE_SEACASGenshell=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASGenshell=ON
+-- Setting SEACAS_ENABLE_SEACASGrepos=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASGrepos=ON
+-- Setting SEACAS_ENABLE_SEACASExplore=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASExplore=ON
+-- Setting SEACAS_ENABLE_SEACASMapvarlib=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASMapvarlib=ON
+-- Setting SEACAS_ENABLE_SEACASMapvar=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASMapvar=ON
+-- Setting SEACAS_ENABLE_SEACASMapvar-kd=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASMapvar-kd=ON
+-- Setting SEACAS_ENABLE_SEACASMat2exo=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASMat2exo=ON
+-- Setting SEACAS_ENABLE_SEACASNas2exo=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASNas2exo=ON
+-- Setting SEACAS_ENABLE_SEACASZellij=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASZellij=ON
+-- Setting SEACAS_ENABLE_SEACASNemslice=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASNemslice=ON
+-- Setting SEACAS_ENABLE_SEACASNemspread=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASNemspread=ON
+-- Setting SEACAS_ENABLE_SEACASNumbers=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASNumbers=ON
+-- Setting SEACAS_ENABLE_SEACASSlice=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASSlice=ON
+-- Setting SEACAS_ENABLE_SEACASTxtexo=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASTxtexo=ON
+-- Setting SEACAS_ENABLE_SEACASEx2ex1v2=ON since Trilinos_ENABLE_SEACAS=ON AND Trilinos_ENABLE_SEACASEx2ex1v2=ON
+-- Setting SEACAS_ENABLE_MPI=ON since Trilinos_ENABLE_SEACAS=ON AND TPL_ENABLE_MPI=ON
+-- Setting Anasazi_ENABLE_Teuchos=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Anasazi_ENABLE_Tpetra=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Anasazi_ENABLE_Epetra=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Anasazi_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Anasazi_ENABLE_ThyraCore=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting Anasazi_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Anasazi_ENABLE_Belos=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Belos=ON
+-- NOT setting Anasazi_ENABLE_TBB=ON since TBB is NOT enabled at this point!
+-- Setting Anasazi_ENABLE_Amesos=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting Anasazi_ENABLE_AztecOO=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_AztecOO=ON
+-- NOTE: Anasazi_ENABLE_Belos=ON is already set!
+-- NOTE: Anasazi_ENABLE_EpetraExt=ON is already set!
+-- Setting Anasazi_ENABLE_Galeri=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Galeri=ON
+-- Setting Anasazi_ENABLE_Ifpack=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting Anasazi_ENABLE_Triutils=ON since Trilinos_ENABLE_Anasazi=ON AND Trilinos_ENABLE_Triutils=ON
+-- Setting Ifpack2_ENABLE_Belos=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting Ifpack2_ENABLE_Teuchos=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Ifpack2_ENABLE_Tpetra=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Ifpack2_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting Ifpack2_ENABLE_Xpetra=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Xpetra=ON
+-- Setting Ifpack2_ENABLE_Zoltan2Core=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Zoltan2Core=ON
+-- Setting Ifpack2_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting Ifpack2_ENABLE_Amesos2=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting Ifpack2_ENABLE_ShyLU_NodeHTS=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_ShyLU_NodeHTS=ON
+-- Setting Ifpack2_ENABLE_ShyLU_NodeFastILU=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_ShyLU_NodeFastILU=ON
+-- NOT setting Ifpack2_ENABLE_HYPRE=ON since HYPRE is NOT enabled at this point!
+-- NOT setting Ifpack2_ENABLE_Cholmod=ON since Cholmod is NOT enabled at this point!
+-- NOT setting Ifpack2_ENABLE_Lemon=ON since Lemon is NOT enabled at this point!
+-- NOT setting Ifpack2_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- Setting Ifpack2_ENABLE_MPI=ON since Trilinos_ENABLE_Ifpack2=ON AND TPL_ENABLE_MPI=ON
+-- NOTE: Ifpack2_ENABLE_Belos=ON is already set!
+-- Setting Ifpack2_ENABLE_Galeri=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Galeri=ON
+-- NOTE: Ifpack2_ENABLE_Amesos2=ON is already set!
+-- NOTE: Ifpack2_ENABLE_ShyLU_NodeHTS=ON is already set!
+-- Setting Ifpack2_ENABLE_ML=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_ML=ON
+-- Setting Ifpack2_ENABLE_AztecOO=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting Ifpack2_ENABLE_Epetra=ON since Trilinos_ENABLE_Ifpack2=ON AND Trilinos_ENABLE_Epetra=ON
+-- NOT setting Ifpack2_ENABLE_QD=ON since QD is NOT enabled at this point!
+-- NOT setting Ifpack2_ENABLE_HYPRE=ON since HYPRE is NOT enabled at this point!
+-- NOT setting Ifpack2_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- Setting Stratimikos_ENABLE_ThyraCore=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting Stratimikos_ENABLE_Amesos=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting Stratimikos_ENABLE_Amesos2=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting Stratimikos_ENABLE_AztecOO=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting Stratimikos_ENABLE_Belos=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting Stratimikos_ENABLE_Ifpack=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting Stratimikos_ENABLE_Ifpack2=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting Stratimikos_ENABLE_ML=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_ML=ON
+-- Setting Stratimikos_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Stratimikos_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Stratimikos_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting Stratimikos_ENABLE_Triutils=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_Triutils=ON
+-- NOTE: Stratimikos_ENABLE_Ifpack2=ON is already set!
+-- Setting Stratimikos_ENABLE_Galeri=ON since Trilinos_ENABLE_Stratimikos=ON AND Trilinos_ENABLE_Galeri=ON
+-- NOTE: Stratimikos_ENABLE_EpetraExt=ON is already set!
+-- NOTE: Stratimikos_ENABLE_ThyraEpetraAdapters=ON is already set!
+-- NOTE: Stratimikos_ENABLE_ThyraTpetraAdapters=ON is already set!
+-- Setting Teko_ENABLE_Teuchos=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Teko_ENABLE_Thyra=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Thyra=ON
+-- Setting Teko_ENABLE_Stratimikos=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting Teko_ENABLE_Anasazi=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Anasazi=ON
+-- Setting Teko_ENABLE_Tpetra=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Teko_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting Teko_ENABLE_Epetra=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Teko_ENABLE_Isorropia=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Isorropia=ON
+-- Setting Teko_ENABLE_Ifpack2=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting Teko_ENABLE_Ifpack=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting Teko_ENABLE_AztecOO=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting Teko_ENABLE_Amesos=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting Teko_ENABLE_Amesos2=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting Teko_ENABLE_Belos=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting Teko_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Teko_ENABLE_ThyraEpetraExtAdapters=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_ThyraEpetraExtAdapters=ON
+-- Setting Teko_ENABLE_ML=ON since Trilinos_ENABLE_Teko=ON AND Trilinos_ENABLE_ML=ON
+-- NOTE: Teko_ENABLE_Belos=ON is already set!
+-- NOTE: Teko_ENABLE_Ifpack2=ON is already set!
+-- Setting Intrepid_ENABLE_Teuchos=ON since Trilinos_ENABLE_Intrepid=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Intrepid_ENABLE_Shards=ON since Trilinos_ENABLE_Intrepid=ON AND Trilinos_ENABLE_Shards=ON
+-- Setting Intrepid_ENABLE_Sacado=ON since Trilinos_ENABLE_Intrepid=ON AND Trilinos_ENABLE_Sacado=ON
+-- NOT setting Intrepid_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting Intrepid_ENABLE_Epetra=ON since Trilinos_ENABLE_Intrepid=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Intrepid_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Intrepid=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Intrepid_ENABLE_Amesos=ON since Trilinos_ENABLE_Intrepid=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting Intrepid_ENABLE_Pamgen=ON since Trilinos_ENABLE_Intrepid=ON AND Trilinos_ENABLE_Pamgen=ON
+-- Setting Intrepid2_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_Intrepid2=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Intrepid2_ENABLE_TeuchosNumerics=ON since Trilinos_ENABLE_Intrepid2=ON AND Trilinos_ENABLE_TeuchosNumerics=ON
+-- Setting Intrepid2_ENABLE_Shards=ON since Trilinos_ENABLE_Intrepid2=ON AND Trilinos_ENABLE_Shards=ON
+-- Setting Intrepid2_ENABLE_Kokkos=ON since Trilinos_ENABLE_Intrepid2=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Intrepid2_ENABLE_Sacado=ON since Trilinos_ENABLE_Intrepid2=ON AND Trilinos_ENABLE_Sacado=ON
+-- Setting Intrepid2_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Intrepid2=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- NOTE: Intrepid2_ENABLE_Sacado=ON is already set!
+-- Setting Compadre_ENABLE_Kokkos=ON since Trilinos_ENABLE_Compadre=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Compadre_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Compadre=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting Compadre_ENABLE_MPI=ON since Trilinos_ENABLE_Compadre=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting Compadre_ENABLE_CUDA=ON since CUDA is NOT enabled at this point!
+-- NOT setting Compadre_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKUtil_ENABLE_Kokkos=ON since Trilinos_ENABLE_STKUtil=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting STKUtil_ENABLE_SEACASAprepro_lib=ON since Trilinos_ENABLE_STKUtil=ON AND Trilinos_ENABLE_SEACASAprepro_lib=ON
+-- Setting STKUtil_ENABLE_Boost=ON since Trilinos_ENABLE_STKUtil=ON AND TPL_ENABLE_Boost=ON
+-- Setting STKUtil_ENABLE_MPI=ON since Trilinos_ENABLE_STKUtil=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting STKUtil_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKCoupling_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKCoupling=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKCoupling_ENABLE_MPI=ON since Trilinos_ENABLE_STKCoupling=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting STKCoupling_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKMath_ENABLE_Kokkos=ON since Trilinos_ENABLE_STKMath=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting STKMath_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKMath=ON AND Trilinos_ENABLE_STKUtil=ON
+-- NOT setting STKMath_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKSimd_ENABLE_Kokkos=ON since Trilinos_ENABLE_STKSimd=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting STKSimd_ENABLE_STKMath=ON since Trilinos_ENABLE_STKSimd=ON AND Trilinos_ENABLE_STKMath=ON
+-- NOT setting STKSimd_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKExprEval_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKExprEval=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKExprEval_ENABLE_STKMath=ON since Trilinos_ENABLE_STKExprEval=ON AND Trilinos_ENABLE_STKMath=ON
+-- Setting STKExprEval_ENABLE_Kokkos=ON since Trilinos_ENABLE_STKExprEval=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting STKTopology_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKTopology=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKSearch_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKSearch=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKSearch_ENABLE_Kokkos=ON since Trilinos_ENABLE_STKSearch=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting STKSearch_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_STKSearch=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting STKSearch_ENABLE_STKMath=ON since Trilinos_ENABLE_STKSearch=ON AND Trilinos_ENABLE_STKMath=ON
+-- Setting STKSearch_ENABLE_MPI=ON since Trilinos_ENABLE_STKSearch=ON AND TPL_ENABLE_MPI=ON
+-- Setting STKTransfer_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKTransfer=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKTransfer_ENABLE_STKSearch=ON since Trilinos_ENABLE_STKTransfer=ON AND Trilinos_ENABLE_STKSearch=ON
+-- Setting STKMesh_ENABLE_Shards=ON since Trilinos_ENABLE_STKMesh=ON AND Trilinos_ENABLE_Shards=ON
+-- Setting STKMesh_ENABLE_STKTopology=ON since Trilinos_ENABLE_STKMesh=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting STKMesh_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKMesh=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKMesh_ENABLE_Kokkos=ON since Trilinos_ENABLE_STKMesh=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting STKMesh_ENABLE_BLAS=ON since Trilinos_ENABLE_STKMesh=ON AND TPL_ENABLE_BLAS=ON
+-- Setting STKMesh_ENABLE_MPI=ON since Trilinos_ENABLE_STKMesh=ON AND TPL_ENABLE_MPI=ON
+-- Setting STKIO_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_STKIO=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting STKIO_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_STKIO=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting STKIO_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKIO=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKIO_ENABLE_STKMesh=ON since Trilinos_ENABLE_STKIO=ON AND Trilinos_ENABLE_STKMesh=ON
+-- NOT setting STKIO_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKTools_ENABLE_STKIO=ON since Trilinos_ENABLE_STKTools=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting STKTools_ENABLE_STKMesh=ON since Trilinos_ENABLE_STKTools=ON AND Trilinos_ENABLE_STKMesh=ON
+-- Setting STKTools_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKTools=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKTools_ENABLE_STKTransfer=ON since Trilinos_ENABLE_STKTools=ON AND Trilinos_ENABLE_STKTransfer=ON
+-- Setting STKTools_ENABLE_STKTopology=ON since Trilinos_ENABLE_STKTools=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting STKTools_ENABLE_SEACASNemesis=ON since Trilinos_ENABLE_STKTools=ON AND Trilinos_ENABLE_SEACASNemesis=ON
+-- NOT setting STKTools_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKBalance_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting STKBalance_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting STKBalance_ENABLE_SEACASNemesis=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_SEACASNemesis=ON
+-- Setting STKBalance_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting STKBalance_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting STKBalance_ENABLE_Zoltan2Core=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_Zoltan2Core=ON
+-- Setting STKBalance_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKBalance_ENABLE_STKSearch=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_STKSearch=ON
+-- Setting STKBalance_ENABLE_STKMesh=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_STKMesh=ON
+-- Setting STKBalance_ENABLE_STKIO=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting STKBalance_ENABLE_STKTools=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_STKTools=ON
+-- Setting STKBalance_ENABLE_STKTopology=ON since Trilinos_ENABLE_STKBalance=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting STKBalance_ENABLE_BLAS=ON since Trilinos_ENABLE_STKBalance=ON AND TPL_ENABLE_BLAS=ON
+-- Setting STKBalance_ENABLE_LAPACK=ON since Trilinos_ENABLE_STKBalance=ON AND TPL_ENABLE_LAPACK=ON
+-- NOT setting STKBalance_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- NOT setting STKUnit_tests_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKUnit_tests_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKUtil=ON
+-- NOT setting STKUnit_tests_ENABLE_STKUnit_test_utils=ON since STKUnit_test_utils is NOT enabled at this point!
+-- Setting STKUnit_tests_ENABLE_Shards=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_Shards=ON
+-- Setting STKUnit_tests_ENABLE_STKCoupling=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKCoupling=ON
+-- Setting STKUnit_tests_ENABLE_STKTopology=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting STKUnit_tests_ENABLE_STKMath=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKMath=ON
+-- Setting STKUnit_tests_ENABLE_STKSimd=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKSimd=ON
+-- Setting STKUnit_tests_ENABLE_STKExprEval=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKExprEval=ON
+-- NOT setting STKUnit_tests_ENABLE_STKMiddle_mesh=ON since STKMiddle_mesh is NOT enabled at this point!
+-- Setting STKUnit_tests_ENABLE_STKMesh=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKMesh=ON
+-- Setting STKUnit_tests_ENABLE_STKIO=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting STKUnit_tests_ENABLE_STKBalance=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKBalance=ON
+-- Setting STKUnit_tests_ENABLE_STKTransfer=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKTransfer=ON
+-- NOT setting STKUnit_tests_ENABLE_STKTransferUtil=ON since STKTransferUtil is NOT enabled at this point!
+-- Setting STKUnit_tests_ENABLE_STKSearch=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKSearch=ON
+-- Setting STKUnit_tests_ENABLE_STKTools=ON since Trilinos_ENABLE_STKUnit_tests=ON AND Trilinos_ENABLE_STKTools=ON
+-- Setting STKUnit_tests_ENABLE_MPI=ON since Trilinos_ENABLE_STKUnit_tests=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting STKDoc_tests_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting STKDoc_tests_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKUtil=ON
+-- NOT setting STKDoc_tests_ENABLE_STKNGP_TEST=ON since STKNGP_TEST is NOT enabled at this point!
+-- NOT setting STKDoc_tests_ENABLE_STKUnit_test_utils=ON since STKUnit_test_utils is NOT enabled at this point!
+-- Setting STKDoc_tests_ENABLE_STKTopology=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting STKDoc_tests_ENABLE_STKMath=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKMath=ON
+-- Setting STKDoc_tests_ENABLE_STKSimd=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKSimd=ON
+-- Setting STKDoc_tests_ENABLE_STKCoupling=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKCoupling=ON
+-- Setting STKDoc_tests_ENABLE_STKMesh=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKMesh=ON
+-- Setting STKDoc_tests_ENABLE_STKIO=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting STKDoc_tests_ENABLE_STKSearch=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKSearch=ON
+-- NOT setting STKDoc_tests_ENABLE_STKSearchUtil=ON since STKSearchUtil is NOT enabled at this point!
+-- Setting STKDoc_tests_ENABLE_STKTransfer=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKTransfer=ON
+-- NOT setting STKDoc_tests_ENABLE_STKTransferUtil=ON since STKTransferUtil is NOT enabled at this point!
+-- Setting STKDoc_tests_ENABLE_STKExprEval=ON since Trilinos_ENABLE_STKDoc_tests=ON AND Trilinos_ENABLE_STKExprEval=ON
+-- Setting STKDoc_tests_ENABLE_MPI=ON since Trilinos_ENABLE_STKDoc_tests=ON AND TPL_ENABLE_MPI=ON
+-- Setting STKEmend_ENABLE_STKUtil=ON since Trilinos_ENABLE_STKEmend=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STKEmend_ENABLE_MPI=ON since Trilinos_ENABLE_STKEmend=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting STKEmend_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- NOT setting STKEmend_ENABLE_STKUnit_test_utils=ON since STKUnit_test_utils is NOT enabled at this point!
+-- Setting STK_ENABLE_STKUtil=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting STK_ENABLE_STKCoupling=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKCoupling=ON
+-- Setting STK_ENABLE_STKMath=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKMath=ON
+-- Setting STK_ENABLE_STKSimd=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKSimd=ON
+-- Setting STK_ENABLE_STKExprEval=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKExprEval=ON
+-- Setting STK_ENABLE_STKTopology=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting STK_ENABLE_STKSearch=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKSearch=ON
+-- Setting STK_ENABLE_STKTransfer=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKTransfer=ON
+-- Setting STK_ENABLE_STKMesh=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKMesh=ON
+-- Setting STK_ENABLE_STKIO=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting STK_ENABLE_STKTools=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKTools=ON
+-- Setting STK_ENABLE_STKBalance=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKBalance=ON
+-- Setting STK_ENABLE_STKUnit_tests=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKUnit_tests=ON
+-- Setting STK_ENABLE_STKDoc_tests=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKDoc_tests=ON
+-- Setting STK_ENABLE_STKEmend=ON since Trilinos_ENABLE_STK=ON AND Trilinos_ENABLE_STKEmend=ON
+-- Setting STK_ENABLE_MPI=ON since Trilinos_ENABLE_STK=ON AND TPL_ENABLE_MPI=ON
+-- Setting Percept_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting Percept_ENABLE_STKUtil=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting Percept_ENABLE_STKIO=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting Percept_ENABLE_STKMesh=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_STKMesh=ON
+-- Setting Percept_ENABLE_STKExprEval=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_STKExprEval=ON
+-- Setting Percept_ENABLE_STKSearch=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_STKSearch=ON
+-- Setting Percept_ENABLE_STKTransfer=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_STKTransfer=ON
+-- Setting Percept_ENABLE_Intrepid=ON since Trilinos_ENABLE_Percept=ON AND Trilinos_ENABLE_Intrepid=ON
+-- NOT setting Percept_ENABLE_OpenNURBS=ON since OpenNURBS is NOT enabled at this point!
+-- NOT setting Percept_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting Krino_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting Krino_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting Krino_ENABLE_STKBalance=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKBalance=ON
+-- Setting Krino_ENABLE_STKExprEval=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKExprEval=ON
+-- Setting Krino_ENABLE_STKMath=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKMath=ON
+-- Setting Krino_ENABLE_STKIO=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting Krino_ENABLE_STKSearch=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKSearch=ON
+-- Setting Krino_ENABLE_STKTopology=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting Krino_ENABLE_STKUtil=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting Krino_ENABLE_STKTools=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKTools=ON
+-- Setting Krino_ENABLE_STKEmend=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_STKEmend=ON
+-- Setting Krino_ENABLE_Intrepid2=ON since Trilinos_ENABLE_Krino=ON AND Trilinos_ENABLE_Intrepid2=ON
+-- Setting Krino_ENABLE_Boost=ON since Trilinos_ENABLE_Krino=ON AND TPL_ENABLE_Boost=ON
+-- Setting Krino_ENABLE_MPI=ON since Trilinos_ENABLE_Krino=ON AND TPL_ENABLE_MPI=ON
+-- NOT setting Krino_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting Krino_ENABLE_yamlcpp=ON since yamlcpp is NOT enabled at this point!
+-- NOT setting Krino_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- NOT setting Krino_ENABLE_STKUnit_test_utils=ON since STKUnit_test_utils is NOT enabled at this point!
+-- Setting Phalanx_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_Phalanx=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Phalanx_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_Phalanx=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting Phalanx_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_Phalanx=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting Phalanx_ENABLE_Kokkos=ON since Trilinos_ENABLE_Phalanx=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Phalanx_ENABLE_Sacado=ON since Trilinos_ENABLE_Phalanx=ON AND Trilinos_ENABLE_Sacado=ON
+-- Setting Phalanx_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Phalanx=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting NOX_ENABLE_Teuchos=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting NOX_ENABLE_Epetra=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting NOX_ENABLE_EpetraExt=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting NOX_ENABLE_ThyraCore=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting NOX_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting NOX_ENABLE_ThyraEpetraExtAdapters=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_ThyraEpetraExtAdapters=ON
+-- Setting NOX_ENABLE_Amesos=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting NOX_ENABLE_AztecOO=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting NOX_ENABLE_Ifpack=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting NOX_ENABLE_ML=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_ML=ON
+-- Setting NOX_ENABLE_Belos=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting NOX_ENABLE_Anasazi=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Anasazi=ON
+-- Setting NOX_ENABLE_Stratimikos=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting NOX_ENABLE_Teko=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Teko=ON
+-- NOT setting NOX_ENABLE_MF=ON since MF is NOT enabled at this point!
+-- NOT setting NOX_ENABLE_PETSC=ON since PETSC is NOT enabled at this point!
+-- Setting NOX_ENABLE_LAPACK=ON since Trilinos_ENABLE_NOX=ON AND TPL_ENABLE_LAPACK=ON
+-- Setting NOX_ENABLE_BLAS=ON since Trilinos_ENABLE_NOX=ON AND TPL_ENABLE_BLAS=ON
+-- NOTE: NOX_ENABLE_Stratimikos=ON is already set!
+-- Setting NOX_ENABLE_Isorropia=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Isorropia=ON
+-- Setting NOX_ENABLE_Tpetra=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting NOX_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting NOX_ENABLE_Ifpack2=ON since Trilinos_ENABLE_NOX=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting MueLu_ENABLE_Teuchos=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting MueLu_ENABLE_Tpetra=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting MueLu_ENABLE_Xpetra=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Xpetra=ON
+-- Setting MueLu_ENABLE_Kokkos=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting MueLu_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting MueLu_ENABLE_BLAS=ON since Trilinos_ENABLE_MueLu=ON AND TPL_ENABLE_BLAS=ON
+-- Setting MueLu_ENABLE_LAPACK=ON since Trilinos_ENABLE_MueLu=ON AND TPL_ENABLE_LAPACK=ON
+-- Setting MueLu_ENABLE_Amesos=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting MueLu_ENABLE_Amesos2=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting MueLu_ENABLE_Belos=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Belos=ON
+-- NOTE: MueLu_ENABLE_Epetra=OFF is already set so not enabling even though Trilinos_ENABLE_Epetra=ON is set!
+-- Setting MueLu_ENABLE_EpetraExt=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting MueLu_ENABLE_Teko=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Teko=ON
+-- Setting MueLu_ENABLE_Ifpack=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting MueLu_ENABLE_Ifpack2=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting MueLu_ENABLE_Intrepid2=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Intrepid2=ON
+-- Setting MueLu_ENABLE_ML=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_ML=ON
+-- Setting MueLu_ENABLE_Zoltan=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting MueLu_ENABLE_Zoltan2Core=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Zoltan2Core=ON
+-- Setting MueLu_ENABLE_Stratimikos=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting MueLu_ENABLE_Thyra=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Thyra=ON
+-- Setting MueLu_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting MueLu_ENABLE_Isorropia=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Isorropia=ON
+-- Setting MueLu_ENABLE_Boost=ON since Trilinos_ENABLE_MueLu=ON AND TPL_ENABLE_Boost=ON
+-- NOT setting MueLu_ENABLE_MATLAB=ON since MATLAB is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_AmgX=ON since AmgX is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_ViennaCL=ON since ViennaCL is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_MKL=ON since MKL is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_Avatar=ON since Avatar is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_CUSPARSE=ON since CUSPARSE is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_MAGMASparse=ON since MAGMASparse is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_mlpack=ON since mlpack is NOT enabled at this point!
+-- Setting MueLu_ENABLE_Galeri=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Galeri=ON
+-- Setting MueLu_ENABLE_AztecOO=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting MueLu_ENABLE_Pamgen=ON since Trilinos_ENABLE_MueLu=ON AND Trilinos_ENABLE_Pamgen=ON
+-- NOT setting MueLu_ENABLE_HYPRE=ON since HYPRE is NOT enabled at this point!
+-- NOT setting MueLu_ENABLE_PETSC=ON since PETSC is NOT enabled at this point!
+-- Setting Zoltan2Sphynx_ENABLE_Anasazi=ON since Trilinos_ENABLE_Zoltan2Sphynx=ON AND Trilinos_ENABLE_Anasazi=ON
+-- Setting Zoltan2Sphynx_ENABLE_Belos=ON since Trilinos_ENABLE_Zoltan2Sphynx=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting Zoltan2Sphynx_ENABLE_Ifpack2=ON since Trilinos_ENABLE_Zoltan2Sphynx=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting Zoltan2Sphynx_ENABLE_Zoltan2Core=ON since Trilinos_ENABLE_Zoltan2Sphynx=ON AND Trilinos_ENABLE_Zoltan2Core=ON
+-- Setting Zoltan2Sphynx_ENABLE_MueLu=ON since Trilinos_ENABLE_Zoltan2Sphynx=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting Zoltan2Sphynx_ENABLE_Galeri=ON since Trilinos_ENABLE_Zoltan2Sphynx=ON AND Trilinos_ENABLE_Galeri=ON
+-- NOTE: Zoltan2Sphynx_ENABLE_Anasazi=ON is already set!
+-- NOTE: Zoltan2Sphynx_ENABLE_Belos=ON is already set!
+-- NOTE: Zoltan2Sphynx_ENABLE_Ifpack2=ON is already set!
+-- NOTE: Zoltan2Sphynx_ENABLE_Zoltan2Core=ON is already set!
+-- NOTE: Zoltan2Sphynx_ENABLE_MueLu=ON is already set!
+-- NOTE: Zoltan2Sphynx_ENABLE_Galeri=ON is already set!
+-- Setting Zoltan2_ENABLE_Zoltan2Core=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Zoltan2Core=ON
+-- Setting Zoltan2_ENABLE_Zoltan2Sphynx=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Zoltan2Sphynx=ON
+-- Setting Zoltan2_ENABLE_Tpetra=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Zoltan2_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting Zoltan2_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting Zoltan2_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting Zoltan2_ENABLE_Xpetra=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Xpetra=ON
+-- Setting Zoltan2_ENABLE_Zoltan=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting Zoltan2_ENABLE_Epetra=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Zoltan2_ENABLE_Galeri=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Galeri=ON
+-- Setting Zoltan2_ENABLE_Pamgen=ON since Trilinos_ENABLE_Zoltan2=ON AND Trilinos_ENABLE_Pamgen=ON
+-- NOT setting Zoltan2_ENABLE_METIS=ON since METIS is NOT enabled at this point!
+-- NOT setting Zoltan2_ENABLE_PaToH=ON since PaToH is NOT enabled at this point!
+-- NOT setting Zoltan2_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting Zoltan2_ENABLE_PuLP=ON since PuLP is NOT enabled at this point!
+-- NOT setting Zoltan2_ENABLE_Scotch=ON since Scotch is NOT enabled at this point!
+-- NOT setting Zoltan2_ENABLE_AMD=ON since AMD is NOT enabled at this point!
+-- NOT setting Zoltan2_ENABLE_OVIS=ON since OVIS is NOT enabled at this point!
+-- NOT setting Zoltan2_ENABLE_TopoManager=ON since TopoManager is NOT enabled at this point!
+-- Setting ShyLU_DDFROSch_ENABLE_Amesos2=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Teuchos=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Tpetra=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Xpetra=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Xpetra=ON
+-- Setting ShyLU_DDFROSch_ENABLE_MPI=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND TPL_ENABLE_MPI=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Amesos=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Belos=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Epetra=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting ShyLU_DDFROSch_ENABLE_EpetraExt=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Ifpack2=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting ShyLU_DDFROSch_ENABLE_MueLu=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Stratimikos=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Thyra=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Thyra=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Zoltan2=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Zoltan2=ON
+-- Setting ShyLU_DDFROSch_ENABLE_Galeri=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND Trilinos_ENABLE_Galeri=ON
+-- NOTE: ShyLU_DDFROSch_ENABLE_Belos=ON is already set!
+-- NOTE: ShyLU_DDFROSch_ENABLE_Thyra=ON is already set!
+-- Setting ShyLU_DDFROSch_ENABLE_HDF5=ON since Trilinos_ENABLE_ShyLU_DDFROSch=ON AND TPL_ENABLE_HDF5=ON
+-- Setting ShyLU_DDCore_ENABLE_Epetra=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting ShyLU_DDCore_ENABLE_Isorropia=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Isorropia=ON
+-- Setting ShyLU_DDCore_ENABLE_AztecOO=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting ShyLU_DDCore_ENABLE_Belos=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting ShyLU_DDCore_ENABLE_Ifpack=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting ShyLU_DDCore_ENABLE_Amesos=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting ShyLU_DDCore_ENABLE_Teuchos=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting ShyLU_DDCore_ENABLE_Tpetra=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting ShyLU_DDCore_ENABLE_Zoltan2Core=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Zoltan2Core=ON
+-- Setting ShyLU_DDCore_ENABLE_Amesos2=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting ShyLU_DDCore_ENABLE_MPI=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND TPL_ENABLE_MPI=ON
+-- Setting ShyLU_DDCore_ENABLE_ML=ON since Trilinos_ENABLE_ShyLU_DDCore=ON AND Trilinos_ENABLE_ML=ON
+-- NOT setting ShyLU_DDCore_ENABLE_ParMETIS=ON since ParMETIS is NOT enabled at this point!
+-- NOT setting ShyLU_DDCore_ENABLE_SuperLU=ON since SuperLU is NOT enabled at this point!
+-- Setting ShyLU_DD_ENABLE_ShyLU_DDFROSch=ON since Trilinos_ENABLE_ShyLU_DD=ON AND Trilinos_ENABLE_ShyLU_DDFROSch=ON
+-- Setting ShyLU_DD_ENABLE_ShyLU_DDCore=ON since Trilinos_ENABLE_ShyLU_DD=ON AND Trilinos_ENABLE_ShyLU_DDCore=ON
+-- Setting ShyLU_DD_ENABLE_ShyLU_DDCommon=ON since Trilinos_ENABLE_ShyLU_DD=ON AND Trilinos_ENABLE_ShyLU_DDCommon=ON
+-- Setting ShyLU_ENABLE_ShyLU_DD=ON since Trilinos_ENABLE_ShyLU=ON AND Trilinos_ENABLE_ShyLU_DD=ON
+-- Setting ShyLU_ENABLE_ShyLU_Node=ON since Trilinos_ENABLE_ShyLU=ON AND Trilinos_ENABLE_ShyLU_Node=ON
+-- Setting Tempus_ENABLE_Teuchos=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Tempus_ENABLE_Thyra=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_Thyra=ON
+-- Setting Tempus_ENABLE_NOX=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_NOX=ON
+-- Setting Tempus_ENABLE_Epetra=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Tempus_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Tempus_ENABLE_Tpetra=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Tempus_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting Tempus_ENABLE_Belos=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting Tempus_ENABLE_Stratimikos=ON since Trilinos_ENABLE_Tempus=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting Tempus_ENABLE_MPI=ON since Trilinos_ENABLE_Tempus=ON AND TPL_ENABLE_MPI=ON
+-- Setting Stokhos_ENABLE_Teuchos=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Stokhos_ENABLE_Kokkos=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Stokhos_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Stokhos_ENABLE_Ifpack=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting Stokhos_ENABLE_ML=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_ML=ON
+-- Setting Stokhos_ENABLE_Anasazi=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Anasazi=ON
+-- Setting Stokhos_ENABLE_Sacado=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Sacado=ON
+-- Setting Stokhos_ENABLE_NOX=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_NOX=ON
+-- Setting Stokhos_ENABLE_Isorropia=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Isorropia=ON
+-- Setting Stokhos_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting Stokhos_ENABLE_TeuchosKokkosComm=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_TeuchosKokkosComm=ON
+-- Setting Stokhos_ENABLE_Tpetra=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Stokhos_ENABLE_Ifpack2=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting Stokhos_ENABLE_MueLu=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting Stokhos_ENABLE_Belos=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting Stokhos_ENABLE_Amesos2=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting Stokhos_ENABLE_Thyra=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Thyra=ON
+-- Setting Stokhos_ENABLE_Xpetra=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Xpetra=ON
+-- NOT setting Stokhos_ENABLE_ForUQTK=ON since ForUQTK is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_CUDA=ON since CUDA is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_Thrust=ON since Thrust is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_Cusp=ON since Cusp is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_CUSPARSE=ON since CUSPARSE is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_Clp=ON since Clp is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_GLPK=ON since GLPK is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_qpOASES=ON since qpOASES is NOT enabled at this point!
+-- Setting Stokhos_ENABLE_Boost=ON since Trilinos_ENABLE_Stokhos=ON AND TPL_ENABLE_Boost=ON
+-- NOT setting Stokhos_ENABLE_MATLABLib=ON since MATLABLib is NOT enabled at this point!
+-- NOT setting Stokhos_ENABLE_MKL=ON since MKL is NOT enabled at this point!
+-- Setting Stokhos_ENABLE_AztecOO=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting Stokhos_ENABLE_Stratimikos=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting Stokhos_ENABLE_Zoltan=ON since Trilinos_ENABLE_Stokhos=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting ROL_ENABLE_Teuchos=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting ROL_ENABLE_Belos=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting ROL_ENABLE_Epetra=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting ROL_ENABLE_Tpetra=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting ROL_ENABLE_Thyra=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Thyra=ON
+-- Setting ROL_ENABLE_Sacado=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Sacado=ON
+-- Setting ROL_ENABLE_Intrepid=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Intrepid=ON
+-- Setting ROL_ENABLE_MiniTensor=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_MiniTensor=ON
+-- Setting ROL_ENABLE_Shards=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Shards=ON
+-- Setting ROL_ENABLE_Amesos=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting ROL_ENABLE_Amesos2=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Amesos2=ON
+-- Setting ROL_ENABLE_Ifpack2=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting ROL_ENABLE_MueLu=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting ROL_ENABLE_Tempus=ON since Trilinos_ENABLE_ROL=ON AND Trilinos_ENABLE_Tempus=ON
+-- Setting ROL_ENABLE_Boost=ON since Trilinos_ENABLE_ROL=ON AND TPL_ENABLE_Boost=ON
+-- NOT setting ROL_ENABLE_ArrayFireCPU=ON since ArrayFireCPU is NOT enabled at this point!
+-- NOT setting ROL_ENABLE_Eigen=ON since Eigen is NOT enabled at this point!
+-- NOT setting ROL_ENABLE_pebbl=ON since pebbl is NOT enabled at this point!
+-- NOT setting ROL_ENABLE_Gtest=ON since Gtest is NOT enabled at this point!
+-- Setting Piro_ENABLE_Teuchos=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting Piro_ENABLE_Stratimikos=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting Piro_ENABLE_ThyraCore=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting Piro_ENABLE_Tpetra=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting Piro_ENABLE_Teko=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Teko=ON
+-- Setting Piro_ENABLE_NOX=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_NOX=ON
+-- Setting Piro_ENABLE_Tempus=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Tempus=ON
+-- Setting Piro_ENABLE_Stokhos=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Stokhos=ON
+-- Setting Piro_ENABLE_ROL=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_ROL=ON
+-- Setting Piro_ENABLE_Ifpack2=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting Piro_ENABLE_MueLu=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting Piro_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting Piro_ENABLE_ThyraEpetraExtAdapters=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_ThyraEpetraExtAdapters=ON
+-- Setting Piro_ENABLE_Epetra=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting Piro_ENABLE_EpetraExt=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting Piro_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_Piro=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting Piro_ENABLE_MPI=ON since Trilinos_ENABLE_Piro=ON AND TPL_ENABLE_MPI=ON
+-- Setting PanzerCore_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_PanzerCore=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting PanzerCore_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_PanzerCore=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting PanzerCore_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_PanzerCore=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting PanzerCore_ENABLE_TpetraCore=ON since Trilinos_ENABLE_PanzerCore=ON AND Trilinos_ENABLE_TpetraCore=ON
+-- Setting PanzerDofMgr_ENABLE_Shards=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_Shards=ON
+-- Setting PanzerDofMgr_ENABLE_Intrepid2=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_Intrepid2=ON
+-- Setting PanzerDofMgr_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting PanzerDofMgr_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting PanzerDofMgr_ENABLE_Tpetra=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting PanzerDofMgr_ENABLE_Phalanx=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_Phalanx=ON
+-- Setting PanzerDofMgr_ENABLE_PanzerCore=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_PanzerCore=ON
+-- Setting PanzerDofMgr_ENABLE_MPI=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND TPL_ENABLE_MPI=ON
+-- Setting PanzerDofMgr_ENABLE_Epetra=ON since Trilinos_ENABLE_PanzerDofMgr=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting PanzerDiscFE_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting PanzerDiscFE_ENABLE_TeuchosParameterList=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_TeuchosParameterList=ON
+-- Setting PanzerDiscFE_ENABLE_TeuchosComm=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_TeuchosComm=ON
+-- Setting PanzerDiscFE_ENABLE_Kokkos=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting PanzerDiscFE_ENABLE_Sacado=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_Sacado=ON
+-- Setting PanzerDiscFE_ENABLE_Phalanx=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_Phalanx=ON
+-- Setting PanzerDiscFE_ENABLE_Intrepid2=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_Intrepid2=ON
+-- Setting PanzerDiscFE_ENABLE_ThyraCore=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_ThyraCore=ON
+-- Setting PanzerDiscFE_ENABLE_ThyraTpetraAdapters=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_ThyraTpetraAdapters=ON
+-- Setting PanzerDiscFE_ENABLE_Tpetra=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_Tpetra=ON
+-- Setting PanzerDiscFE_ENABLE_Zoltan=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting PanzerDiscFE_ENABLE_PanzerCore=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_PanzerCore=ON
+-- Setting PanzerDiscFE_ENABLE_PanzerDofMgr=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_PanzerDofMgr=ON
+-- Setting PanzerDiscFE_ENABLE_MPI=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND TPL_ENABLE_MPI=ON
+-- Setting PanzerDiscFE_ENABLE_ThyraEpetraAdapters=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_ThyraEpetraAdapters=ON
+-- Setting PanzerDiscFE_ENABLE_ThyraEpetraExtAdapters=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_ThyraEpetraExtAdapters=ON
+-- Setting PanzerDiscFE_ENABLE_Epetra=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_Epetra=ON
+-- Setting PanzerDiscFE_ENABLE_EpetraExt=ON since Trilinos_ENABLE_PanzerDiscFE=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- NOT setting PanzerDiscFE_ENABLE_PAPI=ON since PAPI is NOT enabled at this point!
+-- NOT setting PanzerDiscFE_ENABLE_CAMAL=ON since CAMAL is NOT enabled at this point!
+-- Setting PanzerAdaptersSTK_ENABLE_TeuchosCore=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_TeuchosCore=ON
+-- Setting PanzerAdaptersSTK_ENABLE_STKUtil=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_STKUtil=ON
+-- Setting PanzerAdaptersSTK_ENABLE_STKTopology=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_STKTopology=ON
+-- Setting PanzerAdaptersSTK_ENABLE_STKMesh=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_STKMesh=ON
+-- Setting PanzerAdaptersSTK_ENABLE_STKIO=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting PanzerAdaptersSTK_ENABLE_Zoltan=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Zoltan=ON
+-- Setting PanzerAdaptersSTK_ENABLE_Stratimikos=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting PanzerAdaptersSTK_ENABLE_Piro=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Piro=ON
+-- Setting PanzerAdaptersSTK_ENABLE_NOX=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_NOX=ON
+-- Setting PanzerAdaptersSTK_ENABLE_PanzerCore=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_PanzerCore=ON
+-- Setting PanzerAdaptersSTK_ENABLE_PanzerDiscFE=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_PanzerDiscFE=ON
+-- Setting PanzerAdaptersSTK_ENABLE_STKSearch=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_STKSearch=ON
+-- Setting PanzerAdaptersSTK_ENABLE_SEACASIoss=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_SEACASIoss=ON
+-- Setting PanzerAdaptersSTK_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting PanzerAdaptersSTK_ENABLE_Percept=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Percept=ON
+-- Setting PanzerAdaptersSTK_ENABLE_Teko=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Teko=ON
+-- Setting PanzerAdaptersSTK_ENABLE_MueLu=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting PanzerAdaptersSTK_ENABLE_Ifpack2=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting PanzerAdaptersSTK_ENABLE_Tempus=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Tempus=ON
+-- NOTE: PanzerAdaptersSTK_ENABLE_SEACASIoss=ON is already set!
+-- NOTE: PanzerAdaptersSTK_ENABLE_SEACASExodus=ON is already set!
+-- NOTE: PanzerAdaptersSTK_ENABLE_Teko=ON is already set!
+-- NOTE: PanzerAdaptersSTK_ENABLE_MueLu=ON is already set!
+-- NOTE: PanzerAdaptersSTK_ENABLE_Ifpack2=ON is already set!
+-- Setting PanzerAdaptersSTK_ENABLE_Pamgen=ON since Trilinos_ENABLE_PanzerAdaptersSTK=ON AND Trilinos_ENABLE_Pamgen=ON
+-- NOTE: PanzerAdaptersSTK_ENABLE_STKSearch=ON is already set!
+-- Setting PanzerMiniEM_ENABLE_PanzerCore=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_PanzerCore=ON
+-- Setting PanzerMiniEM_ENABLE_PanzerDofMgr=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_PanzerDofMgr=ON
+-- Setting PanzerMiniEM_ENABLE_PanzerDiscFE=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_PanzerDiscFE=ON
+-- Setting PanzerMiniEM_ENABLE_PanzerAdaptersSTK=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_PanzerAdaptersSTK=ON
+-- Setting PanzerMiniEM_ENABLE_Phalanx=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_Phalanx=ON
+-- Setting PanzerMiniEM_ENABLE_Belos=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting PanzerMiniEM_ENABLE_Teko=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_Teko=ON
+-- Setting PanzerMiniEM_ENABLE_MueLu=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting PanzerMiniEM_ENABLE_MPI=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND TPL_ENABLE_MPI=ON
+-- Setting PanzerMiniEM_ENABLE_ML=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_ML=ON
+-- Setting PanzerMiniEM_ENABLE_ShyLU_NodeTacho=ON since Trilinos_ENABLE_PanzerMiniEM=ON AND Trilinos_ENABLE_ShyLU_NodeTacho=ON
+-- NOT setting PanzerMiniEM_ENABLE_PAPI=ON since PAPI is NOT enabled at this point!
+-- NOT setting PanzerMiniEM_ENABLE_CAMAL=ON since CAMAL is NOT enabled at this point!
+-- Setting Panzer_ENABLE_PanzerCore=ON since Trilinos_ENABLE_Panzer=ON AND Trilinos_ENABLE_PanzerCore=ON
+-- Setting Panzer_ENABLE_PanzerDofMgr=ON since Trilinos_ENABLE_Panzer=ON AND Trilinos_ENABLE_PanzerDofMgr=ON
+-- Setting Panzer_ENABLE_PanzerDiscFE=ON since Trilinos_ENABLE_Panzer=ON AND Trilinos_ENABLE_PanzerDiscFE=ON
+-- Setting Panzer_ENABLE_PanzerAdaptersSTK=ON since Trilinos_ENABLE_Panzer=ON AND Trilinos_ENABLE_PanzerAdaptersSTK=ON
+-- Setting Panzer_ENABLE_PanzerMiniEM=ON since Trilinos_ENABLE_Panzer=ON AND Trilinos_ENABLE_PanzerMiniEM=ON
+-- Setting Adelus_ENABLE_Kokkos=ON since Trilinos_ENABLE_Adelus=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting Adelus_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_Adelus=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- Setting Adelus_ENABLE_BLAS=ON since Trilinos_ENABLE_Adelus=ON AND TPL_ENABLE_BLAS=ON
+-- Setting Adelus_ENABLE_Teuchos=ON since Trilinos_ENABLE_Adelus=ON AND Trilinos_ENABLE_Teuchos=ON
+-- Setting TrilinosCouplings_ENABLE_Amesos=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Amesos=ON
+-- Setting TrilinosCouplings_ENABLE_AztecOO=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_AztecOO=ON
+-- Setting TrilinosCouplings_ENABLE_Belos=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Belos=ON
+-- Setting TrilinosCouplings_ENABLE_EpetraExt=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_EpetraExt=ON
+-- Setting TrilinosCouplings_ENABLE_Ifpack=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Ifpack=ON
+-- Setting TrilinosCouplings_ENABLE_Isorropia=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Isorropia=ON
+-- Setting TrilinosCouplings_ENABLE_ML=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_ML=ON
+-- Setting TrilinosCouplings_ENABLE_MueLu=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_MueLu=ON
+-- Setting TrilinosCouplings_ENABLE_NOX=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_NOX=ON
+-- Setting TrilinosCouplings_ENABLE_Stokhos=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Stokhos=ON
+-- Setting TrilinosCouplings_ENABLE_Zoltan=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Zoltan=ON
+-- NOTE: TrilinosCouplings_ENABLE_Amesos=ON is already set!
+-- NOTE: TrilinosCouplings_ENABLE_AztecOO=ON is already set!
+-- Setting TrilinosCouplings_ENABLE_Epetra=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Epetra=ON
+-- NOTE: TrilinosCouplings_ENABLE_EpetraExt=ON is already set!
+-- NOTE: TrilinosCouplings_ENABLE_Ifpack=ON is already set!
+-- Setting TrilinosCouplings_ENABLE_Ifpack2=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Ifpack2=ON
+-- Setting TrilinosCouplings_ENABLE_Intrepid=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Intrepid=ON
+-- Setting TrilinosCouplings_ENABLE_Intrepid2=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Intrepid2=ON
+-- NOTE: TrilinosCouplings_ENABLE_Isorropia=ON is already set!
+-- Setting TrilinosCouplings_ENABLE_Kokkos=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Kokkos=ON
+-- Setting TrilinosCouplings_ENABLE_KokkosKernels=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_KokkosKernels=ON
+-- NOTE: TrilinosCouplings_ENABLE_ML=ON is already set!
+-- NOTE: TrilinosCouplings_ENABLE_MueLu=ON is already set!
+-- NOTE: TrilinosCouplings_ENABLE_MueLu=ON is already set!
+-- Setting TrilinosCouplings_ENABLE_Pamgen=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Pamgen=ON
+-- Setting TrilinosCouplings_ENABLE_SEACASExodus=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_SEACASExodus=ON
+-- Setting TrilinosCouplings_ENABLE_SEACASNemesis=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_SEACASNemesis=ON
+-- Setting TrilinosCouplings_ENABLE_Sacado=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Sacado=ON
+-- Setting TrilinosCouplings_ENABLE_STKIO=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_STKIO=ON
+-- Setting TrilinosCouplings_ENABLE_STKMesh=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_STKMesh=ON
+-- NOTE: TrilinosCouplings_ENABLE_Stokhos=ON is already set!
+-- Setting TrilinosCouplings_ENABLE_Stratimikos=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Stratimikos=ON
+-- Setting TrilinosCouplings_ENABLE_Teko=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Teko=ON
+-- Setting TrilinosCouplings_ENABLE_TeuchosKokkosComm=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_TeuchosKokkosComm=ON
+-- Setting TrilinosCouplings_ENABLE_TeuchosKokkosCompat=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_TeuchosKokkosCompat=ON
+-- Setting TrilinosCouplings_ENABLE_Tpetra=ON since Trilinos_ENABLE_TrilinosCouplings=ON AND Trilinos_ENABLE_Tpetra=ON
+-- NOTE: TrilinosCouplings_ENABLE_Zoltan=ON is already set!
+-- NOT setting TrilinosCouplings_ENABLE_Avatar=ON since Avatar is NOT enabled at this point!
+-- NOT setting TrilinosCouplings_ENABLE_TASMANIAN=ON since TASMANIAN is NOT enabled at this point!
+
+Set cache entries for optional packages/TPLs and tests/examples for packages actually enabled ...
+
+
+Enabling the shell of non-enabled parent packages (mostly for show) that have at least one subpackage enabled ...
+
+
+Adjust the set of internal and external packages:
+
+
+Final set of enabled top-level packages:  Kokkos Teuchos KokkosKernels RTOp Sacado MiniTensor Epetra Zoltan Shards Triutils EpetraExt Tpetra TrilinosSS Thyra Xpetra Isorropia Pliris AztecOO Galeri Amesos Pamgen Zoltan2Core Ifpack ML Belos ShyLU_Node Amesos2 SEACAS Anasazi Ifpack2 Stratimikos Teko Intrepid Intrepid2 Compadre STK Percept Krino Phalanx NOX MueLu Zoltan2Sphynx Zoltan2 ShyLU_DD ShyLU Tempus Stokhos ROL Piro Panzer Adelus TrilinosCouplings TrilinosBuildStats TrilinosInstallTests 54
+
+Final set of enabled packages:  Kokkos TeuchosCore TeuchosParser TeuchosParameterList TeuchosComm TeuchosNumerics TeuchosRemainder TeuchosKokkosCompat TeuchosKokkosComm Teuchos KokkosKernels RTOp Sacado MiniTensor Epetra Zoltan Shards Triutils EpetraExt TpetraTSQR TpetraCore Tpetra TrilinosSS ThyraCore ThyraEpetraAdapters ThyraEpetraExtAdapters ThyraTpetraAdapters Thyra Xpetra Isorropia Pliris AztecOO Galeri Amesos Pamgen Zoltan2Core Ifpack ML Belos ShyLU_NodeHTS ShyLU_NodeTacho ShyLU_NodeFastILU ShyLU_Node Amesos2 SEACASExodus SEACASExodus_for SEACASExoIIv2for32 SEACASNemesis SEACASIoss SEACASChaco SEACASAprepro_lib SEACASSupes SEACASSuplib SEACASSuplibC SEACASSuplibCpp SEACASSVDI SEACASPLT SEACASAlgebra SEACASAprepro SEACASBlot SEACASConjoin SEACASEjoin SEACASEpu SEACASCpup SEACASExo2mat SEACASExodiff SEACASExomatlab SEACASExotxt SEACASExo_format SEACASEx1ex2v2 SEACASFastq SEACASGjoin SEACASGen3D SEACASGenshell SEACASGrepos SEACASExplore SEACASMapvarlib SEACASMapvar SEACASMapvar-kd SEACASMat2exo SEACASNas2exo SEACASZellij SEACASNemslice SEACASNemspread SEACASNumbers SEACASSlice SEACASTxtexo SEACASEx2ex1v2 SEACAS Anasazi Ifpack2 Stratimikos Teko Intrepid Intrepid2 Compadre STKUtil STKCoupling STKMath STKSimd STKExprEval STKTopology STKSearch STKTransfer STKMesh STKIO STKTools STKBalance STKUnit_tests STKDoc_tests STKEmend STK Percept Krino Phalanx NOX MueLu Zoltan2Sphynx Zoltan2 ShyLU_DDFROSch ShyLU_DDCore ShyLU_DDCommon ShyLU_DD ShyLU Tempus Stokhos ROL Piro PanzerCore PanzerDofMgr PanzerDiscFE PanzerAdaptersSTK PanzerMiniEM Panzer Adelus TrilinosCouplings TrilinosBuildStats TrilinosInstallTests 138
+
+Final set of non-enabled top-level packages:  TrilinosFrameworkTests TrilinosATDMConfigTests Gtest PyTrilinos PyTrilinos2 NewPackage 6
+
+Final set of non-enabled packages:  TrilinosFrameworkTests TrilinosATDMConfigTests Gtest ShyLU_NodeBasker SEACASExotec2 STKNGP_TEST STKMiddle_mesh STKSearchUtil STKTransferUtil STKMiddle_mesh_util STKUnit_test_utils PanzerExprEval PyTrilinos PyTrilinos2 NewPackage 15
+
+Final set of enabled top-level external packages/TPLs:  MPI BLAS LAPACK Boost HDF5 Netcdf Matio X11 DLlib 9
+
+Final set of enabled external packages/TPLs:  MPI BLAS LAPACK Boost HDF5 Netcdf Matio X11 DLlib 9
+
+Final set of non-enabled top-level external packages/TPLs:  MKL yamlcpp Peano CUDA CUBLAS CUSOLVER CUSPARSE Thrust Cusp ROCBLAS ROCSPARSE ROCSOLVER TBB Pthread HWLOC QTHREAD BinUtils ARPREC QD Scotch OVIS gpcd DataWarp METIS MTMETIS ParMETIS PuLP TopoManager LibTopoMap PaToH CppUnit ADOLC ADIC TVMET MF ExodusII Nemesis XDMF Zlib CGNS Pnetcdf ADIOS2 Faodel Cereal Catalyst2 y12m SuperLUDist SuperLUMT SuperLU Cholmod UMFPACK MA28 AMD CSparse HYPRE PETSC BLACS SCALAPACK MUMPS STRUMPACK CSS_MKL PARDISO_MKL PARDISO Oski TAUCS ForUQTK Dakota HIPS MATLAB CASK SPARSKIT QT gtest BoostLib BoostAlbLib OpenNURBS Portals CrayPortals Gemini InfiniBand BGPDCMF BGQPAMI Pablo HPCToolkit Clp GLPK qpOASES PAPI MATLABLib Eigen Lemon GLM quadmath CAMAL RTlib AmgX VTune TASMANIAN ArrayFireCPU SimMesh SimModel SimParasolid SimAcis SimField Valgrind QUO ViennaCL Avatar mlpack pebbl MAGMASparse Check SARMA CDT mpi_advance 115
+
+Final set of non-enabled external packages/TPLs:  MKL yamlcpp Peano CUDA CUBLAS CUSOLVER CUSPARSE Thrust Cusp ROCBLAS ROCSPARSE ROCSOLVER TBB Pthread HWLOC QTHREAD BinUtils ARPREC QD Scotch OVIS gpcd DataWarp METIS MTMETIS ParMETIS PuLP TopoManager LibTopoMap PaToH CppUnit ADOLC ADIC TVMET MF ExodusII Nemesis XDMF Zlib CGNS Pnetcdf ADIOS2 Faodel Cereal Catalyst2 y12m SuperLUDist SuperLUMT SuperLU Cholmod UMFPACK MA28 AMD CSparse HYPRE PETSC BLACS SCALAPACK MUMPS STRUMPACK CSS_MKL PARDISO_MKL PARDISO Oski TAUCS ForUQTK Dakota HIPS MATLAB CASK SPARSKIT QT gtest BoostLib BoostAlbLib OpenNURBS Portals CrayPortals Gemini InfiniBand BGPDCMF BGQPAMI Pablo HPCToolkit Clp GLPK qpOASES PAPI MATLABLib Eigen Lemon GLM quadmath CAMAL RTlib AmgX VTune TASMANIAN ArrayFireCPU SimMesh SimModel SimParasolid SimAcis SimField Valgrind QUO ViennaCL Avatar mlpack pebbl MAGMASparse Check SARMA CDT mpi_advance 115
+
+Setting up export dependencies for all enabled packages ...
+
+
+Probing the environment ...
+
+-- USE_XSDK_DEFAULTS='FALSE'
+-- BUILD_SHARED_LIBS='ON'
+-- Setting CMAKE_BUILD_TYPE=RELEASE since it was not set ...
+-- CMAKE_BUILD_TYPE='RELEASE'
+-- MPI_USE_COMPILER_WRAPPERS='ON'
+-- MPI_C_COMPILER='/app/bin/mpicc'
+-- Setting CMAKE_C_COMPILER=${MPI_C_COMPILER}
+-- CMAKE_C_COMPILER='/app/bin/mpicc'
+-- MPI_CXX_COMPILER='/app/bin/mpicxx'
+-- Setting CMAKE_CXX_COMPILER=${MPI_CXX_COMPILER}
+-- CMAKE_CXX_COMPILER='/app/bin/mpicxx'
+-- MPI_Fortran_COMPILER='/app/bin/mpif90'
+-- Setting CMAKE_Fortran_COMPILER=${MPI_Fortran_COMPILER}
+-- CMAKE_Fortran_COMPILER='/app/bin/mpif90'
+-- MPI_EXEC='/app/bin/mpiexec'
+-- The C compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /app/bin/mpicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CMAKE_C_COMPILER_ID='GNU'
+-- CMAKE_C_COMPILER_VERSION='14.2.0'
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /app/bin/mpicxx - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CMAKE_CXX_COMPILER_ID='GNU'
+-- CMAKE_CXX_COMPILER_VERSION='14.2.0'
+-- The Fortran compiler identification is GNU 14.2.0
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /app/bin/mpif90 - skipped
+-- Skip adding flags for OpenMP because Kokkos flags does that ...
+-- Trilinos_SET_INSTALL_RPATH='TRUE'
+-- CMAKE_INSTALL_RPATH_USE_LINK_PATH='TRUE'
+-- Setting default for CMAKE_INSTALL_RPATH pointing to Trilinos_INSTALL_LIB_DIR
+-- CMAKE_INSTALL_RPATH='/app/lib64'
+-- Looking for C++ include sys/time.h
+-- Looking for C++ include sys/time.h - found
+-- Looking for C++ include time.h
+-- Looking for C++ include time.h - found
+-- Looking for C++ include stdint.h
+-- Looking for C++ include stdint.h - found
+-- Looking for C++ include inttypes.h
+-- Looking for C++ include inttypes.h - found
+-- Found Perl: /usr/bin/perl (found version "5.40.0")
+-- Fortran name mangling: LOWER UNDER
+-- Detecting Fortran/C Interface
+-- Detecting Fortran/C Interface - Found GLOBAL and MODULE mangling
+-- Verifying Fortran/CXX Compiler Compatibility
+-- Verifying Fortran/CXX Compiler Compatibility - Success
+-- Performing Test MATH_LIBRARY_IS_SUPPLIED
+-- Performing Test MATH_LIBRARY_IS_SUPPLIED - Success
+-- Performing Test FINITE_VALUE_HAVE_GLOBAL_ISNAN
+-- Performing Test FINITE_VALUE_HAVE_GLOBAL_ISNAN - Failed
+-- Performing Test FINITE_VALUE_HAVE_STD_ISNAN
+-- Performing Test FINITE_VALUE_HAVE_STD_ISNAN - Success
+-- Performing Test FINITE_VALUE_HAVE_GLOBAL_ISINF
+-- Performing Test FINITE_VALUE_HAVE_GLOBAL_ISINF - Failed
+-- Performing Test FINITE_VALUE_HAVE_STD_ISINF
+-- Performing Test FINITE_VALUE_HAVE_STD_ISINF - Success
+-- Found Doxygen: /usr/bin/doxygen (found version "1.12.0") found components: doxygen missing components: dot
+
+Getting information for all enabled external packages/TPLs ...
+
+Processing enabled external package/TPL: MPI (enabled explicitly, disable with -DTPL_ENABLE_MPI=OFF)
+-- MPI_LIBRARY_NAMES=''
+Processing enabled external package/TPL: BLAS (enabled by Adelus, disable with -DTPL_ENABLE_BLAS=OFF)
+-- BLAS_LIBRARY_NAMES='blas blas_win32'
+-- Must find at least one lib in each of the lib sets "blas blas_win32"
+-- Searching for libs in BLAS_LIBRARY_DIRS=''
+-- Searching for a lib in the set "blas blas_win32":
+--   Searching for lib 'blas' ...
+--     Found lib '/app/lib64/libblas.so'
+-- TPL_BLAS_LIBRARIES='/app/lib64/libblas.so'
+Processing enabled external package/TPL: LAPACK (enabled by MueLu, disable with -DTPL_ENABLE_LAPACK=OFF)
+-- LAPACK_LIBRARY_NAMES='lapack lapack_win32'
+-- Must find at least one lib in each of the lib sets "lapack lapack_win32"
+-- Searching for libs in LAPACK_LIBRARY_DIRS=''
+-- Searching for a lib in the set "lapack lapack_win32":
+--   Searching for lib 'lapack' ...
+--     Found lib '/app/lib64/liblapack.so'
+-- TPL_LAPACK_LIBRARIES='/app/lib64/liblapack.so'
+Processing enabled external package/TPL: Boost (enabled by Krino, disable with -DTPL_ENABLE_Boost=OFF)
+-- Boost_LIBRARY_NAMES=''
+-- Searching for headers in Boost_INCLUDE_DIRS=''
+-- Searching for a header file in the set "boost/version.hpp":
+--   Searching for header 'boost/version.hpp' ...
+--     Found header '/app/include//boost/version.hpp'
+-- Searching for a header file in the set "boost/mpl/at.hpp":
+--   Searching for header 'boost/mpl/at.hpp' ...
+--     Found header '/app/include//boost/mpl/at.hpp'
+-- Found TPL 'Boost' include dirs '/app/include'
+-- TPL_Boost_INCLUDE_DIRS='/app/include'
+Processing enabled external package/TPL: HDF5 (enabled explicitly, disable with -DTPL_ENABLE_HDF5=OFF)
+-- Using find_package(HDF5 ...) ...
+CMake Debug Log at /usr/share/cmake-3.31/Modules/FindHDF5.cmake:513 (find_package):
+  The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR.
+
+    /run/build/trilinos/build/CMakeFiles/pkgRedirects
+
+  <PackageName>_ROOT CMake variable [CMAKE_FIND_USE_PACKAGE_ROOT_PATH].
+
+    none
+
+  CMAKE_PREFIX_PATH variable [CMAKE_FIND_USE_CMAKE_PATH].
+
+    none
+
+  CMAKE_FRAMEWORK_PATH and CMAKE_APPBUNDLE_PATH variables
+  [CMAKE_FIND_USE_CMAKE_PATH].
+
+    none
+
+  Env variable HDF5_DIR [CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH].
+
+    none
+
+  CMAKE_PREFIX_PATH env variable [CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH].
+
+    none
+
+  CMAKE_FRAMEWORK_PATH and CMAKE_APPBUNDLE_PATH env variables
+  [CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH].
+
+    none
+
+  Paths specified by the find_package HINTS option.
+
+    none
+
+  Standard system environment variables
+  [CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH].
+
+    /app
+    /usr
+
+  CMake User Package Registry [CMAKE_FIND_USE_PACKAGE_REGISTRY].
+
+    none
+
+  CMake variables defined in the Platform file
+  [CMAKE_FIND_USE_CMAKE_SYSTEM_PATH].
+
+    /usr/local
+    /
+    /usr/X11R6
+    /usr/pkg
+    /opt
+
+  CMake System Package Registry
+  [CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY].
+
+    none
+
+  Paths specified by the find_package PATHS option.
+
+    none
+
+  find_package considered the following locations for HDF5's Config module:
+
+    /run/build/trilinos/build/CMakeFiles/pkgRedirects/HDF5Config.cmake
+    /run/build/trilinos/build/CMakeFiles/pkgRedirects/hdf5-config.cmake
+    /app/HDF5Config.cmake
+    /app/hdf5-config.cmake
+    /app/cmake/HDF5Config.cmake
+    /app/cmake/hdf5-config.cmake
+
+  The file was found at
+
+    /app/cmake/hdf5-config.cmake
+
+Call Stack (most recent call first):
+  cmake/tribits/common_tpls/FindTPLHDF5.cmake:68 (find_package)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:226 (include)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:170 (tribits_process_enabled_tribits_find_tpl_mod_file)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:105 (tribits_process_enabled_standard_tpl)
+  cmake/tribits/core/package_arch/TribitsProjectImpl.cmake:199 (tribits_process_enabled_tpls)
+  cmake/tribits/core/package_arch/TribitsProject.cmake:92 (tribits_project_impl)
+  CMakeLists.txt:48 (TRIBITS_PROJECT)
+
+
+CMake Debug Log at /usr/share/cmake-3.31/Modules/FindHDF5.cmake:807 (find_program):
+  find_program called with the following settings:
+
+    VAR: HDF5_DIFF_EXECUTABLE
+    NAMES: "h5diff"
+    Documentation: HDF5 file differencing tool.
+    Framework
+      Only Search Frameworks: 0
+      Search Frameworks Last: 0
+      Search Frameworks First: 0
+    AppBundle
+      Only Search AppBundle: 0
+      Search AppBundle Last: 0
+      Search AppBundle First: 0
+    CMAKE_FIND_USE_CMAKE_PATH: 1
+    CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: 1
+    CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: 1
+    CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: 1
+    CMAKE_FIND_USE_INSTALL_PREFIX: 1
+
+  find_program considered the following locations:
+
+    /app/bin/bin/h5diff
+    /app/bin/Bin/h5diff
+
+  The item was found at
+
+    /app/bin/h5diff
+
+Call Stack (most recent call first):
+  cmake/tribits/common_tpls/FindTPLHDF5.cmake:68 (find_package)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:226 (include)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:170 (tribits_process_enabled_tribits_find_tpl_mod_file)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:105 (tribits_process_enabled_standard_tpl)
+  cmake/tribits/core/package_arch/TribitsProjectImpl.cmake:199 (tribits_process_enabled_tpls)
+  cmake/tribits/core/package_arch/TribitsProject.cmake:92 (tribits_project_impl)
+  CMakeLists.txt:48 (TRIBITS_PROJECT)
+
+
+-- Found HDF5: hdf5-shared (found version "1.14.5") found components: C
+CMake Debug Log at cmake/tribits/common_tpls/FindTPLHDF5.cmake:68 (find_package):
+  find_package considered the following paths for FindHDF5.cmake:
+
+    /run/build/trilinos/FindHDF5.cmake
+    /run/build/trilinos/cmake/FindHDF5.cmake
+    /run/build/trilinos/cmake/tribits/core/utils/FindHDF5.cmake
+    /run/build/trilinos/cmake/tribits/core/common/FindHDF5.cmake
+    /run/build/trilinos/cmake/tribits/core/test_support/FindHDF5.cmake
+    /run/build/trilinos/cmake/tribits/core/package_arch/FindHDF5.cmake
+    /run/build/trilinos/cmake/tribits/core/config_tests/FindHDF5.cmake
+    /run/build/trilinos/cmake/tribits/core/modules/FindHDF5.cmake
+    /run/build/trilinos/cmake/tribits/core/installation/FindHDF5.cmake
+    /run/build/trilinos/cmake/FindHDF5.cmake
+
+  The file was found at
+
+    /usr/share/cmake-3.31/Modules/FindHDF5.cmake
+
+Call Stack (most recent call first):
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:226 (include)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:170 (tribits_process_enabled_tribits_find_tpl_mod_file)
+  cmake/tribits/core/package_arch/TribitsProcessEnabledTpls.cmake:105 (tribits_process_enabled_standard_tpl)
+  cmake/tribits/core/package_arch/TribitsProjectImpl.cmake:199 (tribits_process_enabled_tpls)
+  cmake/tribits/core/package_arch/TribitsProject.cmake:92 (tribits_project_impl)
+  CMakeLists.txt:48 (TRIBITS_PROJECT)
+
+
+-- HDF5_LIBRARY_NAMES='hdf5;z;hdf5_hl'
+-- TPL_HDF5_LIBRARIES='hdf5-shared'
+-- TPL_HDF5_INCLUDE_DIRS='/app/include'
+Processing enabled external package/TPL: Netcdf (enabled by SEACASNemesis, disable with -DTPL_ENABLE_Netcdf=OFF)
+-- Using find_package(Netcdf ...) ...
+-- NetCDF include file /app/include/netcdf.h will be searched for define values
+-- NetCDF does not require HDF5
+-- NetCDF does not require PNetCDF
+-- Found NetCDF: /app/lib/libnetcdf.so
+-- NetCDF Version:
+-- 	NetCDF_NEEDS_HDF5        =
+-- 	NetCDF_NEEDS_PNetCDF     =
+-- 	NetCDF_PARALLEL          = True
+-- 	NetCDF_INCLUDE_DIRS      = /app/include
+-- 	NetCDF_LIBRARIES         = /app/lib/libnetcdf.so
+-- 	NetCDF_BINARIES          = ncdump;ncgen;nccopy
+-- Netcdf_LIBRARY_NAMES='netcdf;pnetcdf'
+-- TPL_Netcdf_LIBRARIES='/app/lib/libnetcdf.so'
+-- TPL_Netcdf_INCLUDE_DIRS='/app/include'
+-- TPL_Netcdf_PARALLEL is True
+Processing enabled external package/TPL: Matio (enabled by SEACASMat2exo, disable with -DTPL_ENABLE_Matio=OFF)
+-- Matio_LIBRARY_NAMES='matio'
+-- Must find at least one lib in each of the lib sets "matio"
+-- Searching for libs in Matio_LIBRARY_DIRS=''
+-- Searching for a lib in the set "matio":
+--   Searching for lib 'matio' ...
+--     Found lib '/app/lib/libmatio.so'
+-- TPL_Matio_LIBRARIES='/app/lib/libmatio.so'
+-- Searching for headers in Matio_INCLUDE_DIRS=''
+-- Searching for a header file in the set "matio.h":
+--   Searching for header 'matio.h' ...
+--     Found header '/app/include//matio.h'
+-- Found TPL 'Matio' include dirs '/app/include'
+-- TPL_Matio_INCLUDE_DIRS='/app/include'
+Processing enabled external package/TPL: X11 (enabled by SEACASSVDI, disable with -DTPL_ENABLE_X11=OFF)
+-- X11_LIBRARY_NAMES='X11'
+-- Must find at least one lib in each of the lib sets "X11"
+-- Searching for libs in X11_LIBRARY_DIRS=''
+-- Searching for a lib in the set "X11":
+--   Searching for lib 'X11' ...
+--     Found lib '/usr/lib/x86_64-linux-gnu/libX11.so'
+-- TPL_X11_LIBRARIES='/usr/lib/x86_64-linux-gnu/libX11.so'
+-- Searching for headers in X11_INCLUDE_DIRS=''
+-- Searching for a header file in the set "X11/Xlib.h":
+--   Searching for header 'X11/Xlib.h' ...
+--     Found header '/usr/include//X11/Xlib.h'
+-- Searching for a header file in the set "X11/Xutil.h":
+--   Searching for header 'X11/Xutil.h' ...
+--     Found header '/usr/include//X11/Xutil.h'
+-- Searching for a header file in the set "X11/Xos.h":
+--   Searching for header 'X11/Xos.h' ...
+--     Found header '/usr/include//X11/Xos.h'
+-- Searching for a header file in the set "X11/keysym.h":
+--   Searching for header 'X11/keysym.h' ...
+--     Found header '/usr/include//X11/keysym.h'
+-- Searching for a header file in the set "X11/Xresource.h":
+--   Searching for header 'X11/Xresource.h' ...
+--     Found header '/usr/include//X11/Xresource.h'
+-- Searching for a header file in the set "X11/Xatom.h":
+--   Searching for header 'X11/Xatom.h' ...
+--     Found header '/usr/include//X11/Xatom.h'
+-- Found TPL 'X11' include dirs '/usr/include'
+-- TPL_X11_INCLUDE_DIRS='/usr/include'
+Processing enabled external package/TPL: DLlib (enabled explicitly, disable with -DTPL_ENABLE_DLlib=OFF)
+-- Attempting to tentatively enable TPL 'DLlib' ...
+-- DLlib_LIBRARY_NAMES='dl'
+-- Must find at least one lib in each of the lib sets "dl"
+-- Searching for libs in DLlib_LIBRARY_DIRS=''
+-- Searching for a lib in the set "dl":
+--   Searching for lib 'dl' ...
+--     Found lib '/usr/lib/x86_64-linux-gnu/libdl.a'
+-- TPL_DLlib_LIBRARIES='/usr/lib/x86_64-linux-gnu/libdl.a'
+-- Attempt to tentatively enable TPL 'DLlib' passed!
+
+Setting up testing support ...
+
+-- CTEST_DROP_METHOD='https'
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+
+Configuring individual enabled Trilinos packages ...
+
+-- NOTE: Can't fill in version date files for Trilinos since /run/build/trilinos/.git/ does not exist!
+Processing enabled top-level package: Kokkos (Libs)
+-- Setting default Kokkos CXX standard to 17
+-- Kokkos version: 4.3.1
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- The project name is: Trilinos
+-- Using internal gtest for testing
+-- Using -std=c++17 for C++17 standard as feature
+-- Built-in Execution Spaces:
+--     Device Parallel: NoTypeDefined
+--     Host Parallel: NoTypeDefined
+--       Host Serial: SERIAL
+--
+-- Architectures:
+-- Using internal desul_atomics copy
+-- Kokkos Backends: SERIAL
+Processing enabled top-level package: Teuchos (Core, Parser, ParameterList, Comm, Numerics, Remainder, KokkosCompat, KokkosComm)
+-- Performing Test HAVE_GCC_ABI_DEMANGLE
+-- Performing Test HAVE_GCC_ABI_DEMANGLE - Success
+-- Performing Test HAVE_TEUCHOSCORE_BOOST_IS_POLYMORPHIC
+-- Performing Test HAVE_TEUCHOSCORE_BOOST_IS_POLYMORPHIC - Success
+-- Performing Test HAVE_TEUCHOS_BLASFLOAT
+-- Performing Test HAVE_TEUCHOS_BLASFLOAT - Failed
+-- Performing Test HAVE_TEUCHOS_BLASFLOAT_DOUBLE_RETURN
+-- Performing Test HAVE_TEUCHOS_BLASFLOAT_DOUBLE_RETURN - Failed
+-- Performing Test HAVE_TEUCHOS_LAPACKLARND
+-- Performing Test HAVE_TEUCHOS_LAPACKLARND - Failed
+-- Performing Test HAVE_CXX_ATTRIBUTE_CONSTRUCTOR
+-- Performing Test HAVE_CXX_ATTRIBUTE_CONSTRUCTOR - Success
+-- C++ compiler supports __attribute__((constructor)) syntax
+-- Performing Test HAVE_CXX_ATTRIBUTE_WEAK
+-- Performing Test HAVE_CXX_ATTRIBUTE_WEAK - Success
+-- C++ compiler supports __attribute__((weak)) syntax and testing weak functions
+-- Performing Test HAVE_CXX_PRAGMA_WEAK
+-- Performing Test HAVE_CXX_PRAGMA_WEAK - Failed
+-- C++ compiler does NOT support #pragma weak syntax and testing weak functions
+-- Wrapping every Teuchos timer with a Kokkos profiling region.
+Processing enabled top-level package: KokkosKernels (Libs)
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- The project name is: Trilinos
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+Overriding KOKKOSKERNELS_ENABLE_TPL_BLAS=OFF with TPL_ENABLE_BLAS=ON
+Overriding KOKKOSKERNELS_ENABLE_TPL_LAPACK=OFF with TPL_ENABLE_LAPACK=ON
+Trilinos has enabled MKL and SYCL but it does not detect oneMKL correctly so we disable it!
+-- Performing Test KK_BLAS_RESULT_AS_POINTER_ARG
+-- Performing Test KK_BLAS_RESULT_AS_POINTER_ARG - Failed
+
+================================
+Kokkos Kernels version: 4.3.1
+================================
+Kokkos Kernels ETI Types
+   Devices:  <Serial,HostSpace>
+   Scalars:  double
+   Ordinals: int
+   Offsets:  size_t
+   Layouts:  LayoutLeft
+
+Kokkos Kernels components
+   COMMON:    ON
+   BATCHED:   ON
+   BLAS:      ON
+   LAPACK:    ON
+   GRAPH:     ON
+   SPARSE:    ON
+   ODE:       ON
+
+Kokkos Kernels TPLs
+   BLAS:
+   LAPACK:
+================================
+
+-- Creating ETI files for Batched_Gemm_nt_nt_bll
+-- Creating ETI files for Batched_Gemm_nt_t_bll
+-- Creating ETI files for Batched_Gemm_t_nt_bll
+-- Creating ETI files for Batched_Gemm_t_t_bll
+-- Creating ETI files for Batched_Gemm_nt_nt_blr
+-- Creating ETI files for Batched_Gemm_nt_t_blr
+-- Creating ETI files for Batched_Gemm_t_nt_blr
+-- Creating ETI files for Batched_Gemm_t_t_blr
+-- Creating ETI files for Blas1_abs
+-- Creating ETI files for Blas1_abs_mv
+-- Creating ETI files for Blas1_scal
+-- Creating ETI files for Blas1_scal_mv
+-- Creating ETI files for Blas1_dot
+-- Creating ETI files for Blas1_dot_mv
+-- Creating ETI files for Blas1_axpby
+-- Creating ETI files for Blas1_axpby_mv
+-- Creating ETI files for Blas1_update
+-- Creating ETI files for Blas1_update_mv
+-- Creating ETI files for Blas1_sum
+-- Creating ETI files for Blas1_sum_mv
+-- Creating ETI files for Blas1_nrm1
+-- Creating ETI files for Blas1_nrm1_mv
+-- Creating ETI files for Blas1_nrm2w
+-- Creating ETI files for Blas1_nrm2w_mv
+-- Creating ETI files for Blas1_nrminf
+-- Creating ETI files for Blas1_nrminf_mv
+-- Creating ETI files for Blas1_iamax
+-- Creating ETI files for Blas1_iamax_mv
+-- Creating ETI files for Blas1_nrm2
+-- Creating ETI files for Blas1_nrm2_mv
+-- Creating ETI files for Blas1_mult
+-- Creating ETI files for Blas1_mult_mv
+-- Creating ETI files for Blas1_reciprocal
+-- Creating ETI files for Blas1_reciprocal_mv
+-- Creating ETI files for Blas1_rot
+-- Creating ETI files for Blas1_rotg
+-- Creating ETI files for Blas1_rotm
+-- Creating ETI files for Blas1_rotmg
+-- Creating ETI files for Blas1_swap
+-- Creating ETI files for Blas2_gemv
+-- Creating ETI files for Blas2_ger
+-- Creating ETI files for Blas2_syr
+-- Creating ETI files for Blas2_syr2
+-- Creating ETI files for Blas3_gemm
+-- Creating ETI files for Blas3_trsm
+-- Creating ETI files for Blas3_trmm
+-- Creating ETI files for Lapack_gesv
+-- Creating ETI files for Lapack_trtri
+-- Creating ETI files for Lapack_svd
+-- Creating ETI files for Graph_color_d1
+-- Creating ETI files for Sparse_sptrsv_solve
+-- Creating ETI files for Sparse_spmv_struct
+-- Creating ETI files for Sparse_spmv_mv_struct
+-- Creating ETI files for Sparse_spmv_bsrmatrix
+-- Creating ETI files for Sparse_spmv_mv_bsrmatrix
+-- Creating ETI files for Sparse_spmv
+-- Creating ETI files for Sparse_spmv_mv
+-- Creating ETI files for Sparse_spgemm_symbolic
+-- Creating ETI files for Sparse_spgemm_numeric
+-- Creating ETI files for Sparse_spgemm_noreuse
+-- Creating ETI files for Sparse_bspgemm_numeric
+-- Creating ETI files for Sparse_spgemm_jacobi
+-- Creating ETI files for Sparse_spadd_symbolic
+-- Creating ETI files for Sparse_spadd_numeric
+-- Creating ETI files for Sparse_spiluk_symbolic
+-- Creating ETI files for Sparse_spiluk_numeric
+-- Creating ETI files for Sparse_par_ilut_symbolic
+-- Creating ETI files for Sparse_par_ilut_numeric
+-- Creating ETI files for Sparse_gmres
+-- Creating ETI files for Sparse_sptrsv_symbolic
+-- Creating ETI files for Sparse_trsv
+-- Creating ETI files for Sparse_gauss_seidel_symbolic
+-- Creating ETI files for Sparse_gauss_seidel_numeric
+-- Creating ETI files for Sparse_gauss_seidel_apply
+Processing enabled top-level package: RTOp (Libs)
+Processing enabled top-level package: Sacado (Libs)
+-- Performing Test HAS_C99_TR1_CMATH
+-- Performing Test HAS_C99_TR1_CMATH - Success
+Processing enabled top-level package: MiniTensor (Libs)
+Processing enabled top-level package: Epetra (Libs)
+-- Looking for dggsvd3
+-- Looking for dggsvd3 - not found
+-- Looking for dggsvd3_
+-- Looking for dggsvd3_ - found
+-- Looking for DGGSVD3
+-- Looking for DGGSVD3 - not found
+-- Looking for DGGSVD3_
+-- Looking for DGGSVD3_ - not found
+Found new version of lapack. dggsvd3 is available.
+Processing enabled top-level package: Zoltan (Libs)
+Processing enabled top-level package: Shards (Libs)
+Processing enabled top-level package: Triutils (Libs)
+Processing enabled top-level package: EpetraExt (Libs)
+Processing enabled top-level package: Tpetra (TSQR, Core)
+-- Tpetra: Using internal Kokkos
+-- Tpetra: Enabling deprecated code
+-- Determine whether Tpetra will assume that MPI is GPU aware:
+--   - Tpetra_INST_CUDA, Tpetra_INST_HIP and Tpetra_INST_SYCL atre OFF, so Tpetra will assume that MPI is not GPU aware.
+-- Tpetra: defaulting to Tpetra_ASSUME_GPU_AWARE_MPI: OFF
+-- Tpetra execution space availability (ON means available):
+--   - Serial:  ON
+--   - Threads: OFF
+--   - OpenMP:  OFF
+--   - Cuda:    OFF
+--   - HIP:     OFF
+--   - SYCL:    OFF
+-- Tpetra: Tpetra_INST_INT_LONG_LONG is enabled by default.
+-- Tpetra: Tpetra_INST_INT_UNSIGNED is disabled by default.
+-- Tpetra: Tpetra_INST_INT_UNSIGNED_LONG is disabled by default.
+-- Tpetra: Tpetra_INST_INT_INT is disabled by default.
+-- Tpetra: Tpetra_INST_INT_LONG is disabled by default.
+--
+-- Tpetra: Validate global ordinal setting ...
+-- Tpetra: global ordinal setting is OK
+--
+-- Setting default Node to Tpetra::KokkosCompat::KokkosSerialWrapperNode.
+-- Tpetra: Using Full ETI
+Processing enabled top-level package: TrilinosSS (Libs)
+Processing enabled top-level package: Thyra (Core, EpetraAdapters, EpetraExtAdapters, TpetraAdapters)
+-- Thyra ModelEvaluator Hessian interfaces On
+Processing enabled top-level package: Xpetra (Libs)
+-- Xpetra: Enabling deprecated code
+-- NOTE: Setting Xpetra_ENABLE_EpetraExt=OFF since Xpetra_ENABLE_Epetra='OFF'
+-- Xpetra: Enabling ETI
+Processing enabled top-level package: Isorropia (Libs)
+Processing enabled top-level package: Pliris (Libs)
+     Building the double precision(default) library
+Processing enabled top-level package: AztecOO (Libs)
+Processing enabled top-level package: Galeri (Libs)
+Processing enabled top-level package: Amesos (Libs)
+Processing enabled top-level package: Pamgen (Libs)
+Processing enabled top-level package: Zoltan2Core (Libs)
+Processing enabled top-level package: Ifpack (Libs)
+Processing enabled top-level package: ML (Libs)
+Processing enabled top-level package: Belos (Libs)
+Processing enabled top-level package: ShyLU_Node (HTS, Tacho, FastILU)
+-- Generating ETI: Tacho_Driver_ETI_double_Serial.cpp
+-- Generating ETI: Tacho_Driver_ETI_float_Serial.cpp
+-- Generating ETI: Tacho_Driver_ETI_complex_double_Serial.cpp
+-- Generating ETI: Tacho_Driver_ETI_complex_float_Serial.cpp
+Processing enabled top-level package: Amesos2 (Libs)
+-- NOTE: Disabling Amesos2_ENABLE_ShyLU_NodeBasker because CUDA or HIP is enabled in Kokkos or OpenMP is not enabled in Kokkos
+Processing enabled top-level package: SEACAS (Exodus, Exodus_for, ExoIIv2for32, Nemesis, Ioss, Chaco, Aprepro_lib, Supes, Suplib, SuplibC, SuplibCpp, SVDI, PLT, Algebra, Aprepro, Blot, Conjoin, Ejoin, Epu, Cpup, Exo2mat, Exodiff, Exomatlab, Exotxt, Exo_format, Ex1ex2v2, Fastq, Gjoin, Gen3D, Genshell, Grepos, Explore, Mapvarlib, Mapvar, Mapvar-kd, Mat2exo, Nas2exo, Zellij, Nemslice, Nemspread, Numbers, Slice, Txtexo, Ex2ex1v2)
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- SEACASIoss_exodus32_to_exodus32: NOT added test because SEACASIoss_ENABLE_TESTS=''.
+-- SEACASIoss_exodus_fpp_serialize: NOT added test because SEACASIoss_ENABLE_TESTS=''.
+-- SEACASIoss_create_path_fpp: NOT added test because SEACASIoss_ENABLE_TESTS=''.
+-- SEACASIoss_exodus32_to_exodus64: NOT added test because SEACASIoss_ENABLE_TESTS=''.
+-- SEACASIoss_exodus32_to_exodus32_pnetcdf: NOT added test because SEACASIoss_ENABLE_TESTS=''.
+-- SEACASIoss_pamgen_exodus_io_info: NOT added test because SEACASIoss_ENABLE_TESTS=''.
+-- SEACASIoss_io_info_config_has_zoltan: NOT added test because SEACASIoss_ENABLE_TESTS=''.
+-- SEACASSupes_exttest: NOT added test because SEACASSupes_ENABLE_TESTS=''.
+-- SEACASAprepro_aprepro_unit_test: NOT added test because SEACASAprepro_ENABLE_TESTS=''.
+-- SEACASAprepro_aprepro_array_test: NOT added test because SEACASAprepro_ENABLE_TESTS=''.
+-- SEACASAprepro_aprepro_command_line_vars_test: NOT added test because SEACASAprepro_ENABLE_TESTS=''.
+-- SEACASAprepro_aprepro_command_line_include_test: NOT added test because SEACASAprepro_ENABLE_TESTS=''.
+-- SEACASAprepro_aprepro_test_dump_reread: NOT added test because SEACASAprepro_ENABLE_TESTS=''.
+-- SEACASAprepro_aprepro_test_exodus: NOT added test because SEACASAprepro_ENABLE_TESTS=''.
+-- SEACASExodiff_exodiff_test_edge_face: NOT added test because SEACASExodiff_ENABLE_TESTS=''.
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - found
+-- Found Python: /usr/bin/python3.12 (found version "3.12.8") found components: Interpreter Development Development.Module Development.Embed
+-- Found python version 3.12.8
+-- A Python-3 version of exodus.py and exomerge.py will be installed.
+Processing enabled top-level package: Anasazi (Libs)
+Processing enabled top-level package: Ifpack2 (Libs)
+Processing enabled top-level package: Stratimikos (Libs)
+Processing enabled top-level package: Teko (Libs)
+-- TEKO_HAVE_EPETRA = ON
+Processing enabled top-level package: Intrepid (Libs)
+Processing enabled top-level package: Intrepid2 (Libs)
+Processing enabled top-level package: Compadre (Libs)
+Processing enabled top-level package: STK (Util, Coupling, Math, Simd, ExprEval, Topology, Search, Transfer, Mesh, IO, Tools, Balance, Unit_tests, Doc_tests, Emend)
+starting STK cmake configuration, CMAKE_SOURCE_DIR=/run/build/trilinos
+*** Building STK as a Trilinos package. ***
+
+PROJECT_NAME: 'Trilinos'
+PACKAGE_NAME: 'STK'
+STK_SOURCE_DIR: '/run/build/trilinos/packages/stk'
+
+STK_HAS_MPI is true
+Optional search library ArborX is not enabled.
+Enabling stk usage of SEACASIoss
+Enabling stk usage of SEACASExodus
+Enabling stk usage of SEACASNemesis
+
+CMAKE_INSTALL_PREFIX: /app
+-- STKTransfer: STKMiddle_mesh not enabled
+Processing enabled top-level package: Percept (Libs)
+Install Percept:adapt
+Install Percept:adapt/sierra_element
+Install Percept:adapt/markers
+Install Percept:percept
+Install Percept:percept/eigen_verify
+Install Percept:percept/element/intrepid
+Install Percept:percept/fixtures
+Install Percept:percept/function
+Install Percept:percept/function/internal
+Install Percept:percept/math
+Install Percept:percept/mesh/diff
+Install Percept:percept/mesh/gen
+Install Percept:percept/mesh/geometry/kernel
+Install Percept:percept/mesh/geometry/kernel/xfer
+Install Percept:percept/mesh/geometry/recovery
+Install Percept:percept/mesh/geometry/stk_geom
+Install Percept:percept/mesh/geometry/stk_geom/3D
+Install Percept:percept/mesh/geometry/volume
+Install Percept:percept/mesh/geometry/volume/sierra_only
+Install Percept:percept/mesh/mod/smoother
+Install Percept:percept/mesh_transfer
+Install Percept:percept/norm
+Install Percept:percept/stk_rebalance
+Install Percept:percept/stk_rebalance_utils
+Install Percept:percept/structured
+Install Percept:percept/uq
+Install Percept:percept/util
+Install Percept:percept/verifier/mesh
+Install Percept:percept/xfer
+Processing enabled top-level package: Krino (Libs)
+Building Krino as a Trilinos package
+Processing enabled top-level package: Phalanx (Libs)
+-- Allow Multiple Evaluator Registration for Same Field: ON
+-- Execution Space: SERIAL
+-- Index Size Type: INT
+-- Sacado Hierarchic DFAD support: FALSE
+-- Experimental Device DAG support: OFF
+-- Experimental Kokkos AMT support: OFF
+Processing enabled top-level package: NOX (Libs)
+-- Experimental code: OFF
+-- LOCA: ON
+-- Epetra Abstractions: ON
+-- Thyra Abstractions: ON
+-- Kokkos Solver Stack: ON
+-- PETSc Abstractions: OFF
+-- Stratimikos/Epetra Stack: ON
+Processing enabled top-level package: MueLu (Libs)
+-- MueLu: Enabling deprecated code
+-- MueLu's tutorial requires for a correct build that if Tpetra is enabled, then GlobalOrdinal=int must be enabled, and either the Serial or OpenMP Nodes in Tpetra be enabled.  Since this is not the case, I am disabling MueLu's tutorial by default.  See Trilinos GitHub Issue #1726 for details: https://github.com/trilinos/Trilinos/issues/1726
+-- You chose to enable MueLu's tutorial, even though I told you that it may not build correctly.  You are responsible for whatever build or link errors may occur as a result.
+-- MueLu: Enabling ETI support
+--    <float,   int, int>       : OFF
+--    <float,   int, long long> : OFF
+--    <double,  int, int>       : OFF
+--    <double,  int, long>      : OFF
+--    <double,  int, long long> : ON
+--    <complex, int, int>       : OFF
+--    <complex, int, long long> : OFF
+-- MueLu: Default GO: long long
+--    HAVE_MUELU_SERIAL       : ON
+--    HAVE_MUELU_OPENMP       : OFF
+--    HAVE_MUELU_CUDA         : OFF
+--    HAVE_MUELU_HIP          : OFF
+--    HAVE_MUELU_SYCL         : OFF
+-- MueLu_MasterList: NOT added test because MueLu_ENABLE_TESTS=''.
+Processing enabled top-level package: Zoltan2Sphynx (Libs)
+Processing enabled top-level package: Zoltan2 (Libs)
+Processing enabled top-level package: ShyLU_DD (FROSch, Core, Common)
+-- ShyLU's Epetra is being DISABLED
+Processing enabled top-level package: ShyLU (Libs)
+Processing enabled top-level package: Tempus (Libs)
+-- Tempus: Epetra Stack: ON
+-- Tempus: Tpetra Stack: ON
+Processing enabled top-level package: Stokhos (Libs)
+-- Enabling ensemble sizes 16
+-- Ensemble size for testing is 16
+-- Looking for C++ include immintrin.h
+-- Looking for C++ include immintrin.h - found
+Processing enabled top-level package: ROL (Libs)
+-- ROL has been configured to use the build options:
+--   ROL::Ptr           is implemented by Teuchos::RCP
+--   ROL::ParameterList is implemented by Teuchos::ParameterList
+--   ROL::stacktrace    is implemented by Teuchos::stacktrace
+--   ROL::LinearAlgebra is implemented by Teuchos::SerialDense
+--   ROL::LAPACK        is implemented by Teuchos::LAPACK
+--   ROL::BLAS          is implemented by Teuchos::BLAS
+Processing enabled top-level package: Piro (Libs)
+-- PIRO_HAVE_EPETRA_STACK: ON
+Processing enabled top-level package: Panzer (Core, DofMgr, DiscFE, AdaptersSTK, MiniEM)
+-- Convergence tests: ON
+-- Global Indexer Epetra Utilities On
+-- Enable Epetra Support in DiscFE: ON
+-- Hessian support OFF
+Processing enabled top-level package: Adelus (Libs)
+     Building the Z Complex library
+     ... use Cuda/HIP Host Pinned memory for MPI
+Processing enabled top-level package: TrilinosCouplings (Libs)
+Processing enabled top-level package: TrilinosBuildStats (Libs)
+-- TrilinosBuildStats_Results: NOT added test because TrilinosBuildStats_ENABLE_TESTS=''.
+Processing enabled top-level package: TrilinosInstallTests (Libs)
+-- TrilinosInstallTests_removeInstall: NOT added test because TrilinosInstallTests_ENABLE_TESTS=''.
+-- TrilinosInstallTests_reduced_tarball: NOT added test because TrilinosInstallTests_ENABLE_TESTS=''.
+-- TrilinosInstallTests_simpleBuildAgainstTrilinos_by_package_build_tree: NOT added test because TrilinosInstallTests_ENABLE_TESTS=''.
+-- TrilinosInstallTests_doInstall: NOT added test because TrilinosInstallTests_ENABLE_TESTS=''.
+-- TrilinosInstallTests_find_package_Trilinos: NOT added test because TrilinosInstallTests_ENABLE_TESTS=''.
+-- TrilinosInstallTests_simpleBuildAgainstTrilinos: NOT added test because TrilinosInstallTests_ENABLE_TESTS=''.
+
+Processing explicit instantiation support for enabled packages ...
+
+Processing ETI support: Ifpack2
+-- Ifpack2: Processing ETI / test support
+-- Enabled Scalar types:        double
+-- Enabled LocalOrdinal types:  int
+-- Enabled GlobalOrdinal types: long long
+-- Enabled Node types:          Tpetra::KokkosCompat::KokkosSerialWrapperNode
+-- User/Downstream ETI set:
+-- Excluded type combinations:
+-- Set of enabled types, before exclusions: S={double} N={Tpetra::KokkosCompat::KokkosSerialWrapperNode} LO={int} GO={long long}
+Processing ETI support: TpetraCore
+-- TpetraCore: Processing ETI / test support
+-- Enabled Scalar types:        long long|double
+-- Enabled LocalOrdinal types:  int
+-- Enabled GlobalOrdinal types: long long
+-- Enabled Node types:          Tpetra::KokkosCompat::KokkosSerialWrapperNode
+-- Excluded type combinations: :
+-- Set of enabled types, before exclusions: S={int} LO={int} GO={long long} N={Tpetra::KokkosCompat::KokkosSerialWrapperNode};S={double} N={Tpetra::KokkosCompat::KokkosSerialWrapperNode} LO={int} GO={long long};S={long long} N={Tpetra::KokkosCompat::KokkosSerialWrapperNode} LO={int} GO={long long};S={double} N={Tpetra::KokkosCompat::KokkosSerialWrapperNode} LO={int} GO={long long}
+
+Set up for creating a distribution ...
+
+
+Finished configuring Trilinos!
+
+********************************************************************
+********  WARNING WARNING WARNING WARNING WARNING WARNING  *********
+********************************************************************
+* Several Trilinos packages are scheduled for deprecation in 2025.
+* The following deprecated packages are enabled (either explicitly
+* or implicitly due to a dependency)
+*
+*    Triutils
+*    ThyraEpetraExtAdapters
+*    ThyraEpetraAdapters
+*    ShyLU_DDCore
+*    Pliris
+*    ML
+*    Isorropia
+*    Intrepid
+*    Ifpack
+*    EpetraExt
+*    Epetra
+*    AztecOO
+*    Amesos
+*
+********************************************************************
+
+CMake Warning at CMakeLists.txt:80 (message):
+  Deprecated packages that are enabled:
+  Triutils;ThyraEpetraExtAdapters;ThyraEpetraAdapters;ShyLU_DDCore;Pliris;ML;Isorropia;Intrepid;Ifpack;EpetraExt;Epetra;AztecOO;Amesos
+
+
+-- If publishing results using Trilinos, please cite us: https://trilinos.github.io/cite.html
+-- Configuring done (44.0s)
+-- Generating done (11.9s)
